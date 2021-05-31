@@ -52,7 +52,7 @@ jobs:
       with:
         azcliversion: 2.0.72
         inlineScript: |
-            az storage blob upload -c ${{ env.CONTAINER_NAME }} -f './published/web.config' -n 'KuldeepSingh_Resume.pdf' --connection-string ${{ secrets.STORAGE_CONN_STRING }}
+            az storage blob upload -c ${{ env.CONTAINER_NAME }} -f './published/web.config' -n 'KuldeepSingh_Resume.pdf' --account-name 'stkd002v2hot ' --account-key ${{ secrets.STORAGE_Key }}
 
     - name: 'Deploy to Azure WebApp'
       uses: azure/webapps-deploy@v1

@@ -52,8 +52,8 @@ jobs:
       with:
         azcliversion: 2.0.72
         inlineScript: |
-            az storage blob upload --connection-string ${{ secrets.STORAGE_CONN_STRING }} --container-name ${{ env.CONTAINER_NAME }} --file './published/web.config'
-        
+            az storage blob upload -c ${{ env.CONTAINER_NAME }} -f './published/web.config' --connection-string ${{ secrets.STORAGE_CONN_STRING }}
+
     - name: 'Deploy to Azure WebApp'
       uses: azure/webapps-deploy@v1
       with:

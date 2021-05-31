@@ -53,6 +53,13 @@ jobs:
         publish-profile: ${{ secrets.KULDEEP_WEB_PUBLISH_PROFILE }}
         package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
 
+    - name: 'Deploy to Azure WebApp01'
+      uses: azure/webapps-deploy@v1
+      with:
+        app-name: 'kuldeepsingh'
+        publish-profile: ${{ secrets.KULDEEPSINGH_WEB_PUBLISH_PROFILE }}
+        package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+        
     - name: Publish Artifacts
       uses: actions/upload-artifact@v1.0.0
       with:

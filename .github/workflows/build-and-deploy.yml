@@ -13,7 +13,7 @@ env:
   AZURE_WEBAPP_NAME: kuldeep
   AZURE_WEBAPP_PACKAGE_PATH: './published'
   NETCORE_VERSION: '3.1.101'  
-  CONTAINER_NAME: 'resume01'
+  CONTAINER_NAME: 'resume'
 
 jobs:
   build:
@@ -38,21 +38,13 @@ jobs:
 
     - name: Publish app for deploy
       run: dotnet publish --configuration Release --no-build --output ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
-
-#    - name: Azure Blob Storage Upload
-#      uses: bacongobbler/azure-blob-storage-upload@v1.1.1
-#      with:
-#        connection_string: ${{ secrets.STORAGE_CONN_STRING }}
-#        container_name: ${{ env.CONTAINER_NAME }}
-#        source_dir: './published'
-#        sync: false
         
     - name: Upload to blob storage
       uses: azure/CLI@v1
       with:
         azcliversion: 2.0.72
         inlineScript: |
-            az storage blob upload -c ${{ env.CONTAINER_NAME }} -f './published/web.config' -n 'web.config' --account-name 'stkd002v2hot' --account-key ${{ secrets.STORAGE_Key }}
+            az storage blob upload -c ${{ env.CONTAINER_NAME }} -f './published/KuldeepSingh_Resume.pdf' -n 'KuldeepSingh_Resume.pdf' --account-name 'stkd002v2hot' --account-key ${{ secrets.STORAGE_Key }}
 
     - name: 'Deploy to Azure WebApp'
       uses: azure/webapps-deploy@v1

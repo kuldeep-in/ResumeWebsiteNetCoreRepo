@@ -1,0 +1,117 @@
+﻿@page
+@using Microsoft.Extensions.Configuration
+@inject IConfiguration Configuration
+@model ResumeWebsite.Pages.PersonalProfileModel
+@{
+}
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kuldeep Singh - Azure Consultant, DevOps, Data Engineer</title>
+    <meta name="description" content="Passionate lead/developer having experience in consulting, designing, developing and delivering solutions to enterprises using Microsoft Azure Technologies. Azure, SQLAzure, CosmosDB, AzureDataFactory, WebApp" />
+    <meta name="keywords" content="Azure, SQLAzure, CosmosDB, AzureDataFactory, WebApp, Data Engineer, Azure Certified Cloud Consultant">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet">
+</head>
+
+<body id="top">
+    <header>
+        <div class="profile-page sidebar-collapse">
+            <nav class="navbar navbar-expand-lg fixed-top navbar-transparent bg-primary" color-on-scroll="400">
+                <div class="container">
+
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="page-content">
+        <div>
+            <div class="profile-page">
+                <div class="wrapper">
+                    <div class="page-header page-header-small">
+                        <div class="page-header-image" style="background-image: url('images/cloudbanner.jpg');"></div>
+                        <div class="container">
+                            <div class="content-center">
+                                <div class="cc-profile-image"><a href="#"><img src="images/kd.jpg" alt="Image" /></a></div>
+                                <div class="h2 title">Kuldeep Singh</div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section" id="experience">
+                <div class="container cc-experience">
+                    <div class="h4 text-center mb-4 title">Marathon Certificates</div>
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-md-3 bg-primary">
+                                <div class="card-body cc-experience-header">
+                                    <p>Jan 2016</p>
+                                    <div class="h5">Marathon</div>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="card-body">
+                                    <embed src="@String.Format("https://stkd002v2hot.blob.core.windows.net/marathon/1_PuneInternational.pdf{0}", @Configuration["SASToken"])" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-md-3 bg-primary">
+                                <div class="card-body cc-experience-header">
+                                    <p>Jan 2016</p>
+                                    <div class="h5">Marathon</div>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="card-body">
+                                    <embed src="@String.Format("https://stkd002v2hot.blob.core.windows.net/marathon/3_LSOM_March2014.PNG{0}", @Configuration["SASToken"])" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="row">
+                            <div class="col-md-3 bg-primary">
+                                <div class="card-body cc-experience-header">
+                                    <p>Aug 2012</p>
+                                    <div class="h5">Marathon</div>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="card-body">
+                                    <embed src="@String.Format("https://stkd002v2hot.blob.core.windows.net/marathon/H1_Mumbai_160214.pdf{0}", @Configuration["SASToken"])" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="section">
+                <div class="container cc-education">
+                    <div class="container text-center">
+                        <a class="cc-facebook btn btn-link" target="_new" href="https://www.facebook.com/in.singhkuldeep/"><i class="fa fa-facebook fa-2x " aria-hidden="true"></i></a>
+                        <a class="cc-twitter btn btn-link " target="_new" href="#"><i class="fa fa-twitter fa-2x " aria-hidden="true"></i></a>
+                        <a class="cc-google-plus btn btn-link" target="_new" href="#"><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></a>
+                        <a class="cc-instagram btn btn-link" target="_new" href="https://www.instagram.com/kuldeep.singh.k/"><i class="fa fa-instagram fa-2x " aria-hidden="true"></i></a>
+                    </div>
+                    <div class="h4 title text-center">Kuldeep Singh</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

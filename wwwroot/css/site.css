@@ -4919,6 +4919,11 @@ Created using IcoMoon - icomoon.io
     margin-top: 30px;
 }
 
+.profile-page .title01 {
+    text-align: center;
+    margin-top: 30px;
+}
+
 .profile-page .description,
 .profile-page .category {
     text-align: center;
@@ -7577,4 +7582,44 @@ a.credit {
 /* Common Style */
 .section {
     padding-bottom: 0;
+}
+
+
+/* Style the tab buttons */
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 33.3%;
+}
+
+    /* Change background color of buttons on hover */
+    .tablink:hover {
+        background-color: #777;
+    }
+
+/* Set default styles for tab content */
+.tabcontent {
+    color: white;
+    display: none;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Style each tab content individually */
+#tab01 {
+    background-color: #236bff;
+}
+
+#tab02 {
+    background-color: green;
+}
+
+#tab03 {
+    background-color: #236bff;
 }

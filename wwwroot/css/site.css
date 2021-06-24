@@ -5363,7 +5363,7 @@ a.credit {
     cursor: pointer;
     padding: 14px 16px;
     font-size: 17px;
-    width: 33.3%;
+    width:100%;
 }
 
     /* Change background color of buttons on hover */
@@ -5381,7 +5381,7 @@ a.credit {
 
 /* Style each tab content individually */
 #tab01 {
-    background-color: #dddddd;
+    background-color: #236bff;
 }
 
 #tab02 {
@@ -5391,3 +5391,18 @@ a.credit {
 #tab03 {
     background-color: #236bff;
 }
+
+
+.col1 {
+    background-color: lightgray;
+    position: fixed;
+    width: 25%
+}
+
+.col2 {
+    background-color: lightblue;
+    overflow: auto;
+    margin-left: 25%;
+    width: 75%
+}
+

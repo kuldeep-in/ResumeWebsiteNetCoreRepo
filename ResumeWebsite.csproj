@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.14.0" />
     <None Update="KuldeepSingh_Resume.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

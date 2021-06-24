@@ -5396,13 +5396,11 @@ a.credit {
 .col1 {
     background-color: lightgray;
     position: fixed;
-    width: 25%
+   
 }
 
 .col2 {
     background-color: lightblue;
     overflow: auto;
-    margin-left: 25%;
-    width: 75%
 }
 

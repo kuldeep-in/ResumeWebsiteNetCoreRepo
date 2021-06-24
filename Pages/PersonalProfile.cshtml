@@ -22,184 +22,187 @@
 </head>
 
   <body>
-    <div class="col1">
-        <div class="cc-profile-image text-center"><a href="#"><img src="images/kd.jpg" alt="Image" /></a></div>
+      <div class="row">
+        <div class="col-md-3">
+            <div class="sticky-top">
+            <div class="cc-profile-image text-center"><a href="#"><img src="images/kd.jpg" alt="Image" /></a></div>
        
-        <button class="tablink" onclick="openCity('tab01', this, '#236bff')" id="defaultOpen">Marathon</button>  
-        <button class="tablink" onclick="openCity('tab02', this, 'green')" >Around the world</button>
-        <button class="tablink" onclick="openCity('tab03', this, '#236bff')">Coming Soon ...</button>
+            <button class="tablink" onclick="openCity('tab01', this, '#236bff')" id="defaultOpen">Marathon</button>  
+            <button class="tablink" onclick="openCity('tab02', this, 'green')" >Around the world</button>
+            <button class="tablink" onclick="openCity('tab03', this, '#236bff')">Coming Soon ...</button>
 
-        <div class="">
-            <div class="container text-center" style="padding-top:400px;">
-                <a class="cc-facebook btn btn-link" target="_new" href="https://www.facebook.com/in.singhkuldeep/"><i class="fa fa-facebook fa-2x " aria-hidden="true"></i></a>
-                <a class="cc-twitter btn btn-link " target="_new" href="#"><i class="fa fa-twitter fa-2x " aria-hidden="true"></i></a>
-                <a class="cc-google-plus btn btn-link" target="_new" href="#"><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></a>
-                <a class="cc-instagram btn btn-link" target="_new" href="https://www.instagram.com/kuldeep.singh.k/"><i class="fa fa-instagram fa-2x " aria-hidden="true"></i></a>
+            <div class="d-none d-md-block">
+                <div class="container text-center" style="padding-top:400px;">
+                    <a class="cc-facebook btn btn-link" target="_new" href="https://www.facebook.com/in.singhkuldeep/"><i class="fa fa-facebook fa-2x " aria-hidden="true"></i></a>
+                    <a class="cc-twitter btn btn-link " target="_new" href="#"><i class="fa fa-twitter fa-2x " aria-hidden="true"></i></a>
+                    <a class="cc-google-plus btn btn-link" target="_new" href="#"><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></a>
+                    <a class="cc-instagram btn btn-link" target="_new" href="https://www.instagram.com/kuldeep.singh.k/"><i class="fa fa-instagram fa-2x " aria-hidden="true"></i></a>
+                </div>
+                <div class="h4 title text-center">Kuldeep Singh</div>
             </div>
-            <div class="h4 title text-center">Kuldeep Singh</div>
-        </div>
-
-    </div>
-    <div class="col2">
-        <div id="tab01" class="card tabcontent">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card-body">
-                        <embed height="550" width="400" src="@String.Format("{0}/H14_Hyderabad2018.pdf{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card-body">
-                        <embed height="550" width="400" src="@String.Format("{0}/H13_Delhi2017.pdf{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card-body">
-                        <embed height="550" width="400" src="@String.Format("{0}/H12_Hyderabad2017.pdf{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card-body">
-                        <embed height="550" width="400" src="@String.Format("{0}/H11_Pune.jpg{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card-body">
-                        <embed height="550" width="400" src="@String.Format("{0}/H10_Hyderabad.pdf{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card-body">
-                        <embed height="550" width="400" src="@String.Format("{0}/H09_Delhi_291115.pdf{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card-body">
-                        <embed height="550" width="400" src="@String.Format("{0}/H08_Gurgoan_011115.pdf{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card-body">
-                        <embed height="550" width="400" src="@String.Format("{0}/H07_Hyderabad_300815.pdf{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card-body">
-                        Certificate Not available.
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card-body">
-                        <embed height="550" width="400" src="@String.Format("{0}/H05_Pune_100515.pdf{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card-body">
-                        <embed height="550" width="400" src="@String.Format("{0}/H04_Kundalika_28052015.pdf{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card-body">
-                        <embed height="550" width="400" src="@String.Format("{0}/H03_Pune_071214.pdf{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card-body">
-                        <embed height="550" width="400" src="@String.Format("{0}/H02_Hyderabad_240814.pdf{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card-body">
-                        <embed height="550" width="400" src="@String.Format("{0}/H01_Mumbai_160214.pdf{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card-body">
-                        <embed height="550" width="400" src="@String.Format("{0}/10k02_Pune_30mar14.png{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card-body">
-                        <embed height="550" width="400" src="@String.Format("{0}/10k01_Pune_01dec13.pdf{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="card-body">
-                        <embed height="550" width="400" src="@String.Format("{0}/10k03_Hyderabad_27nov16.pdf{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
-                    </div>
-                </div> 
             </div>
         </div>
+        <div class="col-md-9">
+            <div id="tab01" class="card tabcontent">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <embed height="550" width="400" src="@String.Format("{0}/H14_Hyderabad2018.pdf{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <embed height="550" width="400" src="@String.Format("{0}/H13_Delhi2017.pdf{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <embed height="550" width="400" src="@String.Format("{0}/H12_Hyderabad2017.pdf{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <embed height="550" width="400" src="@String.Format("{0}/H11_Pune.jpg{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <embed height="550" width="400" src="@String.Format("{0}/H10_Hyderabad.pdf{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <embed height="550" width="400" src="@String.Format("{0}/H09_Delhi_291115.pdf{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <embed height="550" width="400" src="@String.Format("{0}/H08_Gurgoan_011115.pdf{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <embed height="550" width="400" src="@String.Format("{0}/H07_Hyderabad_300815.pdf{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            Certificate Not available.
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <embed height="550" width="400" src="@String.Format("{0}/H05_Pune_100515.pdf{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <embed height="550" width="400" src="@String.Format("{0}/H04_Kundalika_28052015.pdf{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <embed height="550" width="400" src="@String.Format("{0}/H03_Pune_071214.pdf{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <embed height="550" width="400" src="@String.Format("{0}/H02_Hyderabad_240814.pdf{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <embed height="550" width="400" src="@String.Format("{0}/H01_Mumbai_160214.pdf{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <embed height="550" width="400" src="@String.Format("{0}/10k02_Pune_30mar14.png{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <embed height="550" width="400" src="@String.Format("{0}/10k01_Pune_01dec13.pdf{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <embed height="550" width="400" src="@String.Format("{0}/10k03_Hyderabad_27nov16.pdf{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
+                        </div>
+                    </div> 
+                </div>
+            </div>
 
-        <div id="tab02" class="tabcontent">
-            <div class="card">
-                <div class="row">
-                    <div class="col-md-3 bg-primary">
-                        <div class="card-body cc-experience-header">
-                            <p>Jan 2016</p>
-                            <div class="h5">Barcelona</div>
+            <div id="tab02" class="tabcontent">
+                <div class="card">
+                    <div class="row">
+                        <div class="col-md-3 bg-primary">
+                            <div class="card-body cc-experience-header">
+                                <p>Jan 2016</p>
+                                <div class="h5">Barcelona</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <embed height="550" width="400" src="@String.Format("{0}/H11_Pune.jpg{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
+                        </div>
+                        <div class="col-md-5">
+                            <embed height="550" width="400" src="@String.Format("{0}/H11_Pune.jpg{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <embed height="550" width="400" src="@String.Format("{0}/H11_Pune.jpg{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
+                </div>
+                <div class="card">
+                    <div class="row">
+                        <div class="col-md-3 bg-primary">
+                            <div class="card-body cc-experience-header">
+                                <p>Aug 2015</p>
+                                <div class="h5">USA</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <embed height="550" width="400" src="@String.Format("{0}/H11_Pune.jpg{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
+                        </div>
+                        <div class="col-md-5">
+                            <embed height="550" width="400" src="@String.Format("{0}/H11_Pune.jpg{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
+                        </div>
                     </div>
-                    <div class="col-md-5">
-                        <embed height="550" width="400" src="@String.Format("{0}/H11_Pune.jpg{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
+                </div>
+                <div class="card">
+                    <div class="row">
+                        <div class="col-md-3 bg-primary">
+                            <div class="card-body cc-experience-header">
+                                <p>Jul 2015</p>
+                                <div class="h5">Germany</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <embed height="550" width="400" src="@String.Format("{0}/H11_Pune.jpg{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
+                        </div>
+                        <div class="col-md-5">
+                            <embed height="550" width="400" src="@String.Format("{0}/H11_Pune.jpg{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="row">
-                    <div class="col-md-3 bg-primary">
-                        <div class="card-body cc-experience-header">
-                            <p>Aug 2015</p>
-                            <div class="h5">USA</div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <embed height="550" width="400" src="@String.Format("{0}/H11_Pune.jpg{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
-                    </div>
-                    <div class="col-md-5">
-                        <embed height="550" width="400" src="@String.Format("{0}/H11_Pune.jpg{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="row">
-                    <div class="col-md-3 bg-primary">
-                        <div class="card-body cc-experience-header">
-                            <p>Jul 2015</p>
-                            <div class="h5">Germany</div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <embed height="550" width="400" src="@String.Format("{0}/H11_Pune.jpg{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
-                    </div>
-                    <div class="col-md-5">
-                        <embed height="550" width="400" src="@String.Format("{0}/H11_Pune.jpg{1}", @Configuration["BlobURL"], @Configuration["SASToken"])" />
-                    </div>
-                </div>
-            </div>
-        </div>
         
-        <div id="tab03" class="tabcontent">
-            this is tab 03
+            <div id="tab03" class="tabcontent">
+                this is tab 03
+            </div>
         </div>
     </div>
   </body>

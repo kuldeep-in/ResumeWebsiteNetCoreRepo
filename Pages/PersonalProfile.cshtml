@@ -34,66 +34,158 @@
                             <div class="content-center col-md-3">
                                 <div class="cc-profile-image"><a href="#"><img src="images/kd.jpg" alt="Image" /></a></div>
                             </div>
-                            <div class="content-center col-md-5" style="padding-top:30px;">
+                            <div class="content-center col-md-3" style="padding-top:30px;">
                                 <div class="h2">Kuldeep Singh</div>
                             </div>
-                            <div class="col-md-4">
-                                    <button class="tablink" onclick="openTab('tab01', this, '#236bff')" id="defaultOpen">Timeline</button>  
-                                    <button class="tablink" onclick="openTab('tab02', this, 'green')" >Marathon</button>
-                                    <button class="tablink" onclick="openTab('tab03', this, '#236bff')">Coming Soon ...</button>
+                            <div class="col-md-3">
+                                <button class="tablink" onclick="openTab('tab01', this, '#236bff')" id="defaultOpen">India</button>  
+                                <button class="tablink" onclick="openTab('tab02', this, 'green')" >USA</button>
+                                <button class="tablink" onclick="openTab('tab03', this, '#236bff')">UK</button>
+                            </div>
+                            <div class="col-md-3">
+                                <button class="tablink" onclick="openTab('tab04', this, '#236bff')">Netherlands</button>  
+                                <button class="tablink" onclick="openTab('tab05', this, 'green')" >Germany</button>
+                                <button class="tablink" onclick="openTab('tabM', this, '#236bff')">Marathon</button>
                             </div>
                         </div>
                     </div>
-                    @*<div class="section">
-                        <div class="container">
-                            <div class="row button-container">
-                                <button class="tablink col-md-4" onclick="openTab('tab01', this, '#236bff')" id="defaultOpen">Timeline</button>  
-                                <button class="tablink col-md-4" onclick="openTab('tab02', this, 'green')" >Marathon</button>
-                                <button class="tablink col-md-4" onclick="openTab('tab03', this, '#236bff')">Coming Soon ...</button>
-                            </div>
-                        </div>
-                    </div>*@
                 </div>  
             </div>
             <div style="padding-top:220px;">                
             </div>
 
-            @*Tab: Timeline*@
+            @*Tab: India*@
             <div class="section tabcontent-pp" id="tab01">
+                <div class="container cc-experience">
+                    <div class="h4 text-center mb-4 title">India</div>
+                    
+                    @foreach(var item in Model.IndiaData)
+                    {
+                        <div class="card col-md-3">  
+                            <div class="bg-primary">
+                                <div>
+                                    <img src="@item.Div01" />
+                                </div>
+                                <div class="card-body-pp cc-experience-header-pp">
+                                    <div class="h6">
+                                        <i class="fa fa-map-marker"></i> <span> @item.Location</span>
+                                    </div>
+                                    <div class="h6">
+                                        <i class="fa fa-calendar"></i> <span> @item.Date</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+
+            @*Tab: USA*@
+            <div class="section tabcontent-pp" id="tab02">
+                <div class="container cc-experience">
+                    <div class="h4 text-center mb-4 title">USA</div>
+                    
+                    @foreach(var item in Model.IndiaData)
+                    {
+                        <div class="card col-md-3">  
+                            <div class="bg-primary">
+                                <div>
+                                    <img src="@item.Div01" />
+                                </div>
+                                <div class="card-body-pp cc-experience-header-pp">
+                                    <div class="h6">
+                                        <i class="fa fa-map-marker"></i> <span> @item.Location</span>
+                                    </div>
+                                    <div class="h6">
+                                        <i class="fa fa-calendar"></i> <span> @item.Date</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+
+            @*Tab: UK*@
+            <div class="section tabcontent-pp" id="tab03">
+                <div class="container cc-experience">
+                    <div class="h4 text-center mb-4 title">UK</div>
+                    
+                    @foreach(var item in Model.UKData)
+                    {
+                        <div class="card col-md-3">  
+                            <div class="bg-primary">
+                                <div>
+                                    <img src="@item.Div01" />
+                                </div>
+                                <div class="card-body-pp cc-experience-header-pp">
+                                    <div class="h6">
+                                        <i class="fa fa-map-marker"></i> <span> @item.Location</span>
+                                    </div>
+                                    <div class="h6">
+                                        <i class="fa fa-calendar"></i> <span> @item.Date</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+
+            @*Tab: Netherlands*@
+            <div class="section tabcontent-pp" id="tab04">
                 <div class="container cc-experience">
                     <div class="h4 text-center mb-4 title">Timeline</div>
                     
-                    @foreach(var item in Model.TimelineData)
+                    @foreach(var item in Model.IndiaData)
                     {
-                        <div class="card">
-                            <div class="row">
-                                <div class="col-md-3 bg-primary">
-                                    <div class="card-body cc-experience-header">
-                                        <div class="h5">
-                                            <i class="fa fa-map-marker"></i> <span> @item.Location</span>
-                                        </div>
-                                        <div class="h5">
-                                            <i class="fa fa-calendar"></i> <span> @item.Date</span>
-                                        </div>
-                                        <div class="h5">
-                                            <i class="fa fa-plane"></i> <span> @item.Flight</span>
-                                        </div>
+                        <div class="card col-md-3">  
+                            <div class="bg-primary">
+                                <div>
+                                    <img src="@String.Format(item.Div01, @Configuration["BlobURL"], @Configuration["SASToken"])" />
+                                </div>
+                                <div class="card-body-pp cc-experience-header-pp">
+                                    <div class="h6">
+                                        <i class="fa fa-map-marker"></i> <span> @item.Location</span>
+                                    </div>
+                                    <div class="h6">
+                                        <i class="fa fa-calendar"></i> <span> @item.Date</span>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
-                                    <embed height="550" width="400" src="@String.Format(item.Div01, @Configuration["BlobURL"], @Configuration["SASToken"])" />
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+
+            @*Tab: Germany*@
+            <div class="section tabcontent-pp" id="tab05">
+                <div class="container cc-experience">
+                    <div class="h4 text-center mb-4 title">Timeline</div>
+                    
+                    @foreach(var item in Model.IndiaData)
+                    {
+                        <div class="card col-md-3">  
+                            <div class="bg-primary">
+                                <div>
+                                    <img src="@String.Format(item.Div01, @Configuration["BlobURL"], @Configuration["SASToken"])" />
                                 </div>
-                                <div class="col-md-5">
-                                    <embed height="550" width="400" src="@String.Format(item.Div02, @Configuration["BlobURL"], @Configuration["SASToken"])" />
+                                <div class="card-body-pp cc-experience-header-pp">
+                                    <div class="h6">
+                                        <i class="fa fa-map-marker"></i> <span> @item.Location</span>
+                                    </div>
+                                    <div class="h6">
+                                        <i class="fa fa-calendar"></i> <span> @item.Date</span>
+                                    </div>
                                 </div>
-                             </div>
+                            </div>
                         </div>
                     }
                 </div>
             </div>
 
             @*Tab: Marathon*@
-            <div class="section tabcontent-pp" id="tab02">
+            <div class="section tabcontent-pp" id="tabM">
                 <div class="container cc-experience">
                     <div class="h4 text-center mb-4 title">Marathon</div>
                     @foreach(var item in Model.MarathonData)
@@ -122,38 +214,6 @@
                              </div>
                         </div>
                     }
-                </div>
-            </div>
-
-            @*Tab: Comming Soon*@
-            <div class="section tabcontent-pp" id="tab03">
-                <div class="container cc-experience">
-                    <div class="h4 text-center mb-4 title">Comming Soon...</div>
-                    
-                    <div class="card">
-                        <div class="row">
-                            <div class="col-md-3 bg-primary">
-                                <div class="card-body cc-experience-header">
-                                    <div class="h5">
-                                        <i class="fa fa-map-marker"></i> <span> - </span>
-                                    </div>
-                                    <div class="h5">
-                                        <i class="fa fa-calendar"></i> <span> - </span>
-                                    </div>
-                                    <div class="h5">
-                                        <i class="fa fa-plane"></i> <span> - </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                Coming soon ...
-                            </div>
-                            <div class="col-md-5">
-                                Coming soon ...
-                            </div>
-                            </div>
-                    </div>
-
                 </div>
             </div>
 

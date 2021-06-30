@@ -2459,6 +2459,10 @@ Created using IcoMoon - icomoon.io
         min-height: 190px;
     }
 
+    .card .card-body-pp {
+        min-height: 50px;
+    }
+
     .card[data-background-color="orange"] {
         background-color: #378C3F;
     }
@@ -5275,6 +5279,14 @@ Created using IcoMoon - icomoon.io
 /* Experience Style */
 .cc-experience .cc-experience-header {
     padding-top: 30px;
+    padding-right: 0;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.cc-experience .cc-experience-header-pp {
+    padding-top: 10px;
     padding-right: 0;
     text-align: center;
     color: #fff;

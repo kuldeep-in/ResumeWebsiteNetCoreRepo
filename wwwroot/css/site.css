@@ -5428,15 +5428,31 @@ a.credit {
 }
 
 /* Style each tab content individually */
-#tab01 {
+#tabIN {
     background-color: #236bff;
 }
 
-#tab02 {
+#tabUSA {
     background-color: green;
 }
 
-#tab03 {
+#tabUK {
+    background-color: #236bff;
+}
+
+#tabDE {
+    background-color: #236bff;
+}
+
+#tabSEA {
+    background-color: green;
+}
+
+#tabFR {
+    background-color: green;
+}
+
+#tabM {
     background-color: #236bff;
 }
 

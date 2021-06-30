@@ -37,14 +37,19 @@
                             <div class="content-center col-md-3" style="padding-top:30px;">
                                 <div class="h2">Kuldeep Singh</div>
                             </div>
-                            <div class="col-md-3">
-                                <button class="tablink" onclick="openTab('tab01', this, '#236bff')" id="defaultOpen">India</button>  
-                                <button class="tablink" onclick="openTab('tab02', this, 'green')" >USA</button>
-                                <button class="tablink" onclick="openTab('tab03', this, '#236bff')">UK</button>
+                            <div class="col-md-2">
+                                <button class="tablink" onclick="openTab('tabIN', this, '#236bff')" id="defaultOpen">India</button>  
+                                <button class="tablink" onclick="openTab('tabUSA', this, 'green')" >USA</button>
+                                <button class="tablink" onclick="openTab('tabUK', this, '#236bff')">UK</button>
+                                <button class="tablink" onclick="openTab('tabNL', this, '#236bff')">Netherlands</button>  
                             </div>
-                            <div class="col-md-3">
-                                <button class="tablink" onclick="openTab('tab04', this, '#236bff')">Netherlands</button>  
-                                <button class="tablink" onclick="openTab('tab05', this, 'green')" >Germany</button>
+                            <div class="col-md-2">
+                                <button class="tablink" onclick="openTab('tabUAE', this, '#236bff')">UAE</button>  
+                                <button class="tablink" onclick="openTab('tabDE', this, 'green')" >Germany</button>
+                                <button class="tablink" onclick="openTab('tabFR', this, '#236bff')">France</button>
+                                <button class="tablink" onclick="openTab('tabSEA', this, '#236bff')">SEA</button>  
+                            </div>
+                            <div class="col-md-2">
                                 <button class="tablink" onclick="openTab('tabM', this, '#236bff')">Marathon</button>
                             </div>
                         </div>
@@ -55,7 +60,7 @@
             </div>
 
             @*Tab: India*@
-            <div class="section tabcontent-pp" id="tab01">
+            <div class="section tabcontent-pp" id="tabIN">
                 <div class="container cc-experience">
                     <div class="h4 text-center mb-4 title">India</div>
                     
@@ -81,7 +86,7 @@
             </div>
 
             @*Tab: USA*@
-            <div class="section tabcontent-pp" id="tab02">
+            <div class="section tabcontent-pp" id="tabUSA">
                 <div class="container cc-experience">
                     <div class="h4 text-center mb-4 title">USA</div>
                     
@@ -107,7 +112,7 @@
             </div>
 
             @*Tab: UK*@
-            <div class="section tabcontent-pp" id="tab03">
+            <div class="section tabcontent-pp" id="tabUK">
                 <div class="container cc-experience">
                     <div class="h4 text-center mb-4 title">UK</div>
                     
@@ -133,9 +138,9 @@
             </div>
 
             @*Tab: Netherlands*@
-            <div class="section tabcontent-pp" id="tab04">
+            <div class="section tabcontent-pp" id="tabNL">
                 <div class="container cc-experience">
-                    <div class="h4 text-center mb-4 title">Timeline</div>
+                    <div class="h4 text-center mb-4 title">Netherlands</div>
                     
                     @foreach(var item in Model.IndiaData)
                     {
@@ -159,28 +164,34 @@
             </div>
 
             @*Tab: Germany*@
-            <div class="section tabcontent-pp" id="tab05">
+            <div class="section tabcontent-pp" id="tabDE">
                 <div class="container cc-experience">
-                    <div class="h4 text-center mb-4 title">Timeline</div>
+                    <div class="h4 text-center mb-4 title">Germany</div>
                     
-                    @foreach(var item in Model.IndiaData)
-                    {
-                        <div class="card col-md-3">  
-                            <div class="bg-primary">
-                                <div>
-                                    <img src="@String.Format(item.Div01, @Configuration["BlobURL"], @Configuration["SASToken"])" />
-                                </div>
-                                <div class="card-body-pp cc-experience-header-pp">
-                                    <div class="h6">
-                                        <i class="fa fa-map-marker"></i> <span> @item.Location</span>
-                                    </div>
-                                    <div class="h6">
-                                        <i class="fa fa-calendar"></i> <span> @item.Date</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    }
+                </div>
+            </div>
+
+            @*Tab: UAE*@
+            <div class="section tabcontent-pp" id="tabUAE">
+                <div class="container cc-experience">
+                    <div class="h4 text-center mb-4 title">UAE</div>
+                    
+                </div>
+            </div>
+
+            @*Tab: France*@
+            <div class="section tabcontent-pp" id="tabFR">
+                <div class="container cc-experience">
+                    <div class="h4 text-center mb-4 title">France</div>
+                    
+                </div>
+            </div>
+
+            @*Tab: SEA*@
+            <div class="section tabcontent-pp" id="tabSEA">
+                <div class="container cc-experience">
+                    <div class="h4 text-center mb-4 title">SEA</div>
+                    
                 </div>
             </div>
 

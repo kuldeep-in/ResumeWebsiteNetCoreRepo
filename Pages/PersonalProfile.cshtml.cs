@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.Extensions.Configuration;
 
 namespace ResumeWebsite.Pages
 {
@@ -12,8 +13,18 @@ namespace ResumeWebsite.Pages
         public IList<Marathon> MarathonData { get; set; }
         public IList<Timeline> TimelineData { get; set; }
 
+        public IConfiguration Configuration { get; }
+
+        public PersonalProfileModel(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+
         public void OnGet()
         {
+            string BlobURL = Configuration.GetSection("BlobURL").Value;
+            string SASToken = Configuration.GetSection("SASToken").Value;
+
             MarathonData = new List<Marathon>
             {
                 new Marathon()
@@ -151,7 +162,7 @@ namespace ResumeWebsite.Pages
                 new Timeline()
                 {
                     Date = "a",
-                    Location = "a",
+                    Location = "Germany",
                     Flight = "DEL->LHR->LHR",
                     Div01 = "{0}/10k02_Pune_30mar14.png{1}",
                     Div02 = "{0}/H11_Pune.jpg{1}"

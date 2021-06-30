@@ -2668,6 +2668,10 @@ Created using IcoMoon - icomoon.io
     min-height: 500px;
 }
 
+.profile-page .page-header-pp {
+    min-height: 220px;
+}
+
 .profile-page .profile-container {
     color: #FFFFFF;
 }
@@ -2953,6 +2957,32 @@ Created using IcoMoon - icomoon.io
 
 .section-signup {
     padding-top: 20vh;
+}
+
+.page-header-pp {
+    height: 100vh;
+    max-height: 220px;
+    padding: 0;
+    color: #FFFFFF;
+    position: relative;
+    background-position: center center;
+    background-size: cover;
+}
+
+.page-header-pp .page-header-image {
+    position: absolute;
+    background-size: cover;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+    /*        z-index: -1;*/
+}
+
+.page-header-pp .container {
+    height: 100%;
+    z-index: 1;
+    text-align: center;
+    position: relative;
 }
 
 .page-header {
@@ -5118,20 +5148,20 @@ Created using IcoMoon - icomoon.io
 
 /* Body */
 /* Profile Page Background Style */
-.page-header {
-    background: rgba(44, 44, 44, 0.2);
+/*.page-header {
+    background: rgba(44, 44, 44, 0.2);*/
     /* For browsers that do not support gradients */
     /* For Safari 5.1 to 6.0 */
     /* For Opera 11.1 to 12.0 */
     /* For Firefox 3.6 to 15 */
-    background: -webkit-gradient(linear, left bottom, left top, from(rgba(44, 44, 44, 0.2)), to(rgba(55, 140, 63, 0.6)));
-    background: linear-gradient(0deg, rgba(44, 44, 44, 0.2), rgba(55, 140, 63, 0.6));
+    /*background: -webkit-gradient(linear, left bottom, left top, from(rgba(44, 44, 44, 0.2)), to(rgba(55, 140, 63, 0.6)));
+    background: linear-gradient(0deg, rgba(44, 44, 44, 0.2), rgba(55, 140, 63, 0.6));*/
     /* Standard syntax */
-}
+/*}
 
     .page-header .btn {
         width: 140px;
-    }
+    }*/
 
 /* Profile Image Style */
 @-webkit-keyframes pulsate {
@@ -5374,6 +5404,12 @@ a.credit {
 /* Set default styles for tab content */
 .tabcontent {
     color: white;
+    display: none;
+    padding: 10px;
+    text-align: center;
+}
+
+.tabcontent-pp {
     display: none;
     padding: 10px;
     text-align: center;

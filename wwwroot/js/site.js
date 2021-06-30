@@ -4,10 +4,10 @@
 // Write your Javascript code.
 
 
-function openCity(cityName, elmnt, color) {
+function openTab(tabName, elmnt, color) {
     // Hide all elements with class="tabcontent" by default */
     var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tabcontent");
+    tabcontent = document.getElementsByClassName("tabcontent-pp");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
     }
@@ -19,7 +19,7 @@ function openCity(cityName, elmnt, color) {
     }
 
     // Show the specific tab content
-    document.getElementById(cityName).style.display = "block";
+    document.getElementById(tabName).style.display = "block";
 
     // Add the specific color to the button used to open the tab content
     elmnt.style.backgroundColor = color;

@@ -1,6 +1,7 @@
 ﻿@page
 @using Microsoft.Extensions.Configuration
 @inject IConfiguration Configuration
+@model ResumeWebsite.Pages.IndexModel
 
 <!DOCTYPE html>
 <html lang="en-US">
@@ -145,113 +146,16 @@
                         <div class="tab-pane active">
                             <div class="ml-auto mr-auto">
                                 <div class="row">
-
+                                @foreach(var item in Model.Badges)
+                                {
                                     <div class="cc-porfolio-image img-raised">
                                         <a href="#">
                                             <figure class="cc-effect">
-                                                <img src="images/01-AzSolutionArchitect-badge.png" alt="Image" />
+                                                <img src="@item" alt="Image" />
                                             </figure>
                                         </a>
                                     </div>
-                                    <div class="cc-porfolio-image img-raised">
-                                        <a href="#">
-                                            <figure class="cc-effect">
-                                                <img src="images/02-DevOpsExpert-badge.png" alt="Image" />
-                                            </figure>
-                                        </a>
-                                    </div>
-                                    <div class="cc-porfolio-image img-raised">
-                                        <a href="#">
-                                            <figure class="cc-effect">
-                                                <img src="images/03-AzDataEngineer-badge.png" alt="Image" />
-                                            </figure>
-                                        </a>
-                                    </div>
-                                    <div class="cc-porfolio-image img-raised">
-                                        <a href="#">
-                                            <figure class="cc-effect">
-                                                <img src="images/04-DataAnalystAssociate-badge.png" alt="Image" />
-                                            </figure>
-                                        </a>
-                                    </div>
-                                    <div class="cc-porfolio-image img-raised">
-                                        <a href="#">
-                                            <figure class="cc-effect">
-                                                <img src="images/04-DatabaseAdministrator-badge.png" alt="Image" />
-                                            </figure>
-                                        </a>
-                                    </div>
-                                    <div class="cc-porfolio-image img-raised">
-                                        <a href="#">
-                                            <figure class="cc-effect">
-                                                <img src="images/azureAdministrator600.png" alt="Image" />
-                                            </figure>
-                                        </a>
-                                    </div>
-                                    <div class="cc-porfolio-image img-raised">
-                                        <a href="#">
-                                            <figure class="cc-effect">
-                                                <img src="images/azuredeveloperassociate600.png" alt="Image" />
-                                            </figure>
-                                        </a>
-                                    </div>
-                                    <div class="cc-porfolio-image img-raised">
-                                        <a href="#">
-                                            <figure class="cc-effect">
-                                                <img src="images/adf.png" alt="Image" />
-                                            </figure>
-                                        </a>
-                                    </div>
-
-                                    <div class="cc-porfolio-image img-raised">
-                                        <a href="#">
-                                            <figure class="cc-effect">
-                                                <img src="images/accessibility.png" alt="Image" />
-                                            </figure>
-                                        </a>
-                                    </div>
-                                    <div class="cc-porfolio-image img-raised">
-                                        <a href="#">
-                                            <figure class="cc-effect">
-                                                <img src="images/xamarin.png" alt="Image" />
-                                            </figure>
-                                        </a>
-                                    </div>
-                                    <div class="cc-porfolio-image img-raised">
-                                        <a href="#">
-                                            <figure class="cc-effect">
-                                                <img src="images/01-exam-az300.png" alt="Image" />
-                                            </figure>
-                                        </a>
-                                    </div>
-                                    <div class="cc-porfolio-image img-raised">
-                                        <a href="#">
-                                            <figure class="cc-effect">
-                                                <img src="images/01-exam-az301.png" alt="Image" />
-                                            </figure>
-                                        </a>
-                                    </div>
-                                    <div class="cc-porfolio-image img-raised">
-                                        <a href="#">
-                                            <figure class="cc-effect">
-                                                <img src="images/02-exam-az400.png" alt="Image" />
-                                            </figure>
-                                        </a>
-                                    </div>
-                                    <div class="cc-porfolio-image img-raised">
-                                        <a href="#">
-                                            <figure class="cc-effect">
-                                                <img src="images/03-exam-dp200.png" alt="Image" />
-                                            </figure>
-                                        </a>
-                                    </div>
-                                    <div class="cc-porfolio-image img-raised">
-                                        <a href="#">
-                                            <figure class="cc-effect">
-                                                <img src="images/03-exam-dp201.png" alt="Image" />
-                                            </figure>
-                                        </a>
-                                    </div>
+                                }
                                 </div>
                             </div>
                         </div>

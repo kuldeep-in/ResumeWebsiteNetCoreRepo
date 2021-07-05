@@ -6,10 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\favicon.ico" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Include="wwwroot\favicon-16x16.png" />
     <None Include="wwwroot\favicon-32x32.png" />
     <None Include="wwwroot\favicon.ico" />

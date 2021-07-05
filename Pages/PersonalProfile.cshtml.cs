@@ -1,13 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Extensions.Configuration;
 
 namespace ResumeWebsite.Pages
 {
+    using Microsoft.AspNetCore.Mvc.RazorPages;
+    using Microsoft.Extensions.Configuration;
+    using System.Collections.Generic;
+
     public class PersonalProfileModel : PageModel
     {
         public IList<Marathon> MarathonData { get; set; }
@@ -25,8 +22,8 @@ namespace ResumeWebsite.Pages
 
         public void OnGet()
         {
-            string BlobURL = Configuration.GetSection("BlobURL").Value;
-            string SASToken = Configuration.GetSection("SASToken").Value;
+            //string BlobURL = Configuration.GetSection("BlobURL").Value;
+            //string SASToken = Configuration.GetSection("SASToken").Value;
 
             TimeLineList = new List<Timeline>
             {
@@ -35,16 +32,16 @@ namespace ResumeWebsite.Pages
                     Title = "title",
                     Date = "10 September",
                     Location = "Location",
-                    Div01 = String.Format("{0}/pp/UK/IMG_20191226_150721~2.jpg{1}", BlobURL,SASToken),
-                    Div02 = String.Format("{0}/pp/UK/IMG_20191226_150721~2.jpg{1}", BlobURL,SASToken)
+                    Div01 = "images/PersonalProfile/UK/IMG_20191226_150721~2.jpg",
+                    Div02 = "images/PersonalProfile/UK/IMG_20191226_150721~2.jpg"
                 },
                 new Timeline()
                 {
                     Title = "Born",
                     Date = "10 September",
                     Location = "Mathura",
-                    Div01 = String.Format("{0}/pp/TL/ab_0011.jpg{1}", BlobURL,SASToken),
-                    Div02 = String.Format("{0}/pp/UK/IMG_20191226_150721~2.jpg{1}", BlobURL,SASToken)
+                    Div01 = "images/PersonalProfile/TL/ab_0011.jpg",
+                    Div02 = "images/PersonalProfile/UK/IMG_20191226_150721~2.jpg"
                 }
             };
 
@@ -55,56 +52,56 @@ namespace ResumeWebsite.Pages
                     Date = "26 Aug 2018",
                     Location = "Hyderabad",
                     TimeTaken = "02:23:15",
-                    Div01 = "{0}/marathon/H14_Hyderabad2018.pdf{1}",
-                    Div02 = "{0}/marathon/H14_Hyderabad2018.pdf{1}"
+                    Div01 = "images/Marathon/H14_Hyderabad2018.pdf",
+                    Div02 = "images/Marathon/H14_Hyderabad2018.pdf"
                 },
                 new Marathon()
                 {
                     Date = "19 Nov 2017",
                     Location = "Delhi",
                     TimeTaken = "2:09:05",
-                    Div01 = "{0}/marathon/H13_Delhi2017.pdf{1}",
-                    Div02 = "{0}/marathon/H13_Delhi2017.pdf{1}"
+                    Div01 = "images/Marathon/H13_Delhi2017.pdf",
+                    Div02 = "images/Marathon/H13_Delhi2017.pdf"
                 },
                 new Marathon()
                 {
                     Date = "20 Aug 2017",
                     Location = "Hyderabad",
                     TimeTaken = "2:12:50",
-                    Div01 = "{0}/marathon/H12_Hyderabad2017.pdf{1}",
-                    Div02 = "{0}/marathon/H12_Hyderabad2017.pdf{1}"
+                    Div01 = "images/Marathon/H12_Hyderabad2017.pdf",
+                    Div02 = "images/Marathon/H12_Hyderabad2017.pdf"
                 },
                 new Marathon()
                 {
                     Date = "16 Oct 2016",
                     Location = "Pune",
                     TimeTaken = "2:42:56",
-                    Div01 = "{0}/marathon/H11_Pune.jpg{1}",
-                    Div02 = "{0}/marathon/H11_Pune.jpg{1}"
+                    Div01 = "images/Marathon/H11_Pune.jpg",
+                    Div02 = "images/Marathon/H11_Pune.jpg"
                 },
                 new Marathon()
                 {
                     Date = "28 Aug 2016",
                     Location = "Hyderabad",
                     TimeTaken = "2:33:29",
-                    Div01 = "{0}/marathon/H10_Hyderabad.pdf{1}",
-                    Div02 = "{0}/marathon/H10_Hyderabad.pdf{1}"
+                    Div01 = "images/Marathon/H10_Hyderabad.pdf",
+                    Div02 = "images/Marathon/H10_Hyderabad.pdf"
                 },
                 new Marathon()
                 {
                     Date = "29 Nov 2015",
                     Location = "Delhi",
                     TimeTaken = "2:08:44",
-                    Div01 = "{0}/marathon/H09_Delhi_291115.pdf{1}",
-                    Div02 = "{0}/marathon/H09_Delhi_291115.pdf{1}"
+                    Div01 = "images/Marathon/H09_Delhi_291115.pdf",
+                    Div02 = "images/Marathon/H09_Delhi_291115.pdf"
                 },
                 new Marathon()
                 {
                     Date = "01 Nov 2015",
                     Location = "Gurgram",
                     TimeTaken = "02:06:07",
-                    Div01 = "{0}/marathon/H08_Gurgoan_011115.pdf{1}",
-                    Div02 = "{0}/marathon/H08_Gurgoan_011115.pdf{1}"
+                    Div01 = "images/Marathon/H08_Gurgoan_011115.pdf",
+                    Div02 = "images/Marathon/H08_Gurgoan_011115.pdf"
                 },
                 new Marathon()
                 {
@@ -119,8 +116,8 @@ namespace ResumeWebsite.Pages
                     Date = "10 May 2015",
                     Location = "Pune",
                     TimeTaken = "02:23:46",
-                    Div01 = "{0}/marathon/H05_Pune_100515.pdf{1}",
-                    Div02 = "{0}/marathon/H05_Pune_100515.pdf{1}"
+                    Div01 = "images/Marathon/H05_Pune_100515.pdf",
+                    Div02 = "images/Marathon/H05_Pune_100515.pdf"
                 },
                 new Marathon()
                 {
@@ -128,7 +125,7 @@ namespace ResumeWebsite.Pages
                     Location = "Kundalika",
                     TimeTaken = "02:48:20",
                     Div01 = "",
-                    Div02 = "{0}/marathon/H04_Kundalika_28052015.pdf{1}"
+                    Div02 = "images/Marathon/H04_Kundalika_28052015.pdf"
                 },
                 new Marathon()
                 {
@@ -136,7 +133,7 @@ namespace ResumeWebsite.Pages
                     Location = "Pune",
                     TimeTaken = "01:55:11",
                     Div01 = "",
-                    Div02 = "{0}/marathon/H03_Pune_071214.pdf{1}"
+                    Div02 = "images/Marathon/H03_Pune_071214.pdf"
                 },
                 new Marathon()
                 {
@@ -144,7 +141,7 @@ namespace ResumeWebsite.Pages
                     Location = "Hyderabad",
                     TimeTaken = "02:23:26",
                     Div01 = "",
-                    Div02 = "{0}/marathon/H02_Hyderabad_240814.pdf{1}"
+                    Div02 = "images/Marathon/H02_Hyderabad_240814.pdf"
                 },
                 new Marathon()
                 {
@@ -152,7 +149,7 @@ namespace ResumeWebsite.Pages
                     Location = "Mumbai",
                     TimeTaken = "02:26:24",
                     Div01 = "",
-                    Div02 = "{0}/marathon/H01_Mumbai_160214.pdf{1}"
+                    Div02 = "images/Marathon/H01_Mumbai_160214.pdf"
                 },
                 new Marathon()
                 {
@@ -160,7 +157,7 @@ namespace ResumeWebsite.Pages
                     Location = "Pune",
                     TimeTaken = "00:50:00",
                     Div01 = "",
-                    Div02 = "{0}/marathon/10k02_Pune_30mar14.png{1}"
+                    Div02 = "images/Marathon/10k02_Pune_30mar14.png"
                 },
                 new Marathon()
                 {
@@ -168,7 +165,7 @@ namespace ResumeWebsite.Pages
                     Location = "Pune",
                     TimeTaken = "00:54:10",
                     Div01 = "",
-                    Div02 = "{0}/marathon/10k01_Pune_01dec13.pdf{1}"
+                    Div02 = "images/Marathon/10k01_Pune_01dec13.pdf"
                 },
                 new Marathon()
                 {
@@ -176,7 +173,7 @@ namespace ResumeWebsite.Pages
                     Location = "Hyderabad",
                     TimeTaken = "00:57:49",
                     Div01 = "",
-                    Div02 = "{0}/marathon/10k03_Hyderabad_27nov16.pdf{1}"
+                    Div02 = "images/Marathon/10k03_Hyderabad_27nov16.pdf"
                 }
             };
 
@@ -186,31 +183,31 @@ namespace ResumeWebsite.Pages
                 {
                     Date = "11 Jan 2020",
                     Location = "IN 01",
-                    Div01 = String.Format("{0}/pp/UK/IMG_20191226_150721~2.jpg{1}", BlobURL,SASToken)
+                    Div01 = "images/PersonalProfile/UK/IMG_20191226_150721~2.jpg"
                 },
                 new Timeline()
                 {
                     Date = "11 Jan 2020",
                     Location = "IN 01",
-                    Div01 = String.Format("{0}/pp/UK/IMG_20191226_150721~2.jpg{1}", BlobURL,SASToken)
+                    Div01 = "images/PersonalProfile/UK/IMG_20191226_150721~2.jpg"
                 },
                 new Timeline()
                 {
                     Date = "11 Jan 2020",
                     Location = "IN 01",
-                    Div01 = String.Format("{0}/pp/UK/IMG_20191226_150721~2.jpg{1}", BlobURL,SASToken)
+                    Div01 = "images/PersonalProfile/UK/IMG_20191226_150721~2.jpg"
                 },
                 new Timeline()
                 {
                     Date = "11 Jan 2020",
                     Location = "IN 01",
-                    Div01 = String.Format("{0}/pp/UK/IMG_20191226_150721~2.jpg{1}", BlobURL,SASToken)
+                    Div01 = "images/PersonalProfile/UK/IMG_20191226_150721~2.jpg"
                 },
                 new Timeline()
                 {
                     Date = "11 Jan 2020",
                     Location = "IN 01",
-                    Div01 = String.Format("{0}/pp/UK/IMG_20191226_150721~2.jpg{1}", BlobURL,SASToken)
+                    Div01 = "images/PersonalProfile/UK/IMG_20191226_150721~2.jpg"
                 }
             };
 
@@ -220,13 +217,13 @@ namespace ResumeWebsite.Pages
                 {
                     Date = "29 Dec 2019",
                     Location = "Bath",
-                    Div01 = String.Format("{0}/pp/UK/IMG_20191229_bath.jpg{1}", BlobURL,SASToken)
+                    Div01 = "images/PersonalProfile/UK/IMG_20191229_bath.jpg"
                 },
                 new Timeline()
                 {
                     Date = "27 Dec 2019",
                     Location = "Snowdonia",
-                    Div01 = String.Format("{0}/pp/UK/IMG_20191226_snodonia.jpg{1}", BlobURL,SASToken)
+                    Div01 = "images/PersonalProfile/UK/IMG_20191226_snodonia.jpg"
                 }
             };
         }

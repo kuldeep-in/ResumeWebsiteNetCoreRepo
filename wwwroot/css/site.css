@@ -5428,11 +5428,19 @@ a.credit {
 }
 
 /* Style each tab content individually */
+#tabTL {
+    background-color: #236bff;
+}
+
 #tabIN {
     background-color: #236bff;
 }
 
 #tabUSA {
+    background-color: green;
+}
+
+#tabNL {
     background-color: green;
 }
 

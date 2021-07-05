@@ -11,6 +11,7 @@ namespace ResumeWebsite.Pages
     public class PersonalProfileModel : PageModel
     {
         public IList<Marathon> MarathonData { get; set; }
+        public IList<Timeline> TimeLineList { get; set; }
         public IList<Timeline> IndiaData { get; set; }
         public IList<Timeline> UKData { get; set; }
         //public IList<Timeline> TimelineData { get; set; }
@@ -26,6 +27,26 @@ namespace ResumeWebsite.Pages
         {
             string BlobURL = Configuration.GetSection("BlobURL").Value;
             string SASToken = Configuration.GetSection("SASToken").Value;
+
+            TimeLineList = new List<Timeline>
+            {
+                new Timeline()
+                {
+                    Title = "title",
+                    Date = "10 September",
+                    Location = "Location",
+                    Div01 = String.Format("{0}/pp/UK/IMG_20191226_150721~2.jpg{1}", BlobURL,SASToken),
+                    Div02 = String.Format("{0}/pp/UK/IMG_20191226_150721~2.jpg{1}", BlobURL,SASToken)
+                },
+                new Timeline()
+                {
+                    Title = "Born",
+                    Date = "10 September",
+                    Location = "Mathura",
+                    Div01 = String.Format("{0}/pp/TL/ab_0011.jpg{1}", BlobURL,SASToken),
+                    Div02 = String.Format("{0}/pp/UK/IMG_20191226_150721~2.jpg{1}", BlobURL,SASToken)
+                }
+            };
 
             MarathonData = new List<Marathon>
             {
@@ -197,36 +218,17 @@ namespace ResumeWebsite.Pages
             {
                 new Timeline()
                 {
-                    Date = "11 Jan 2020",
-                    Location = "IN 01",
-                    Div01 = String.Format("{0}/pp/UK/IMG_20191226_150721~2.jpg{1}", BlobURL,SASToken)
+                    Date = "29 Dec 2019",
+                    Location = "Bath",
+                    Div01 = String.Format("{0}/pp/UK/IMG_20191229_bath.jpg{1}", BlobURL,SASToken)
                 },
                 new Timeline()
                 {
-                    Date = "11 Jan 2020",
-                    Location = "IN 01",
-                    Div01 = String.Format("{0}/pp/UK/IMG_20191226_150721~2.jpg{1}", BlobURL,SASToken)
-                },
-                new Timeline()
-                {
-                    Date = "11 Jan 2020",
-                    Location = "IN 01",
-                    Div01 = String.Format("{0}/pp/UK/IMG_20191226_150721~2.jpg{1}", BlobURL,SASToken)
-                },
-                new Timeline()
-                {
-                    Date = "11 Jan 2020",
-                    Location = "IN 01",
-                    Div01 = String.Format("{0}/pp/UK/IMG_20191226_150721~2.jpg{1}", BlobURL,SASToken)
-                },
-                new Timeline()
-                {
-                    Date = "11 Jan 2020",
-                    Location = "IN 01",
-                    Div01 = String.Format("{0}/pp/UK/IMG_20191226_150721~2.jpg{1}", BlobURL,SASToken)
+                    Date = "27 Dec 2019",
+                    Location = "Snowdonia",
+                    Div01 = String.Format("{0}/pp/UK/IMG_20191226_snodonia.jpg{1}", BlobURL,SASToken)
                 }
             };
-
         }
     }
 
@@ -241,6 +243,7 @@ namespace ResumeWebsite.Pages
 
     public class Timeline
     {
+        public string Title { get; set; }
         public string Location { get; set; }
         public string Date { get; set; }
         public string Flight { get; set; }

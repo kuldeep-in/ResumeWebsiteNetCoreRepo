@@ -1,9 +1,13 @@
 
 namespace ResumeWebsite.Pages
 {
+    using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Mvc.RazorPages;
     using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.FileProviders;
     using System.Collections.Generic;
+    using System.IO;
+    using System.Linq;
 
     public class PersonalProfileModel : PageModel
     {
@@ -14,16 +18,34 @@ namespace ResumeWebsite.Pages
         //public IList<Timeline> TimelineData { get; set; }
 
         public IConfiguration Configuration { get; }
+        private readonly IWebHostEnvironment webHostEnvironment;
 
-        public PersonalProfileModel(IConfiguration configuration)
+        public PersonalProfileModel(IConfiguration configuration, IWebHostEnvironment webHostEnvironment)
         {
             Configuration = configuration;
+            this.webHostEnvironment = webHostEnvironment;
         }
 
         public void OnGet()
         {
             //string BlobURL = Configuration.GetSection("BlobURL").Value;
             //string SASToken = Configuration.GetSection("SASToken").Value;
+
+            var provider = new PhysicalFileProvider(webHostEnvironment.WebRootPath);
+            var contents = provider.GetDirectoryContents(Path.Combine("images", "PersonalProfile", "UK"));
+            var objFiles = contents.OrderBy(m => m.LastModified);
+            UKData = new List<Timeline>();
+
+            foreach (var item in objFiles.ToList())
+            {
+                string[] fileinfo = item.Name.Split('_');
+                UKData.Add(new Timeline()
+                {
+                    Date = fileinfo[1],
+                    Location = fileinfo[2][0..^4],
+                    Div01 = Path.Combine("images/PersonalProfile/UK", item.Name)
+                });
+            }
 
             TimeLineList = new List<Timeline>
             {
@@ -211,21 +233,6 @@ namespace ResumeWebsite.Pages
                 }
             };
 
-            UKData = new List<Timeline>
-            {
-                new Timeline()
-                {
-                    Date = "29 Dec 2019",
-                    Location = "Bath",
-                    Div01 = "images/PersonalProfile/UK/IMG_20191229_bath.jpg"
-                },
-                new Timeline()
-                {
-                    Date = "27 Dec 2019",
-                    Location = "Snowdonia",
-                    Div01 = "images/PersonalProfile/UK/IMG_20191226_snodonia.jpg"
-                }
-            };
         }
     }
 

@@ -79,7 +79,7 @@
             <div class="section tabcontent-pp" id="tabTL">
                 <div class="container cc-experience">
                     <div class="h4 text-center mb-4 title">Timeline</div>
-                    @foreach(var item in Model.TimeLineList)
+                    @foreach(var item in Model.TimeLineList.OrderByDescending(x=>x.DateInt))
                     {
                         <div class="card">
                             <div class="row">

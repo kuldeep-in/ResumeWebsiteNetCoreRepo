@@ -5,7 +5,9 @@ namespace ResumeWebsite.Pages
     using Microsoft.AspNetCore.Mvc.RazorPages;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.FileProviders;
+    using System;
     using System.Collections.Generic;
+    using System.Globalization;
     using System.IO;
     using System.Linq;
 
@@ -30,10 +32,10 @@ namespace ResumeWebsite.Pages
         {
             //string BlobURL = Configuration.GetSection("BlobURL").Value;
             //string SASToken = Configuration.GetSection("SASToken").Value;
-
+            CultureInfo cultureInfo = CultureInfo.InvariantCulture;
             var provider = new PhysicalFileProvider(webHostEnvironment.WebRootPath);
-            var contents = provider.GetDirectoryContents(Path.Combine("images", "PersonalProfile", "UK"));
-            var objFiles = contents.OrderBy(m => m.LastModified);
+            var UKImages = provider.GetDirectoryContents(Path.Combine("images", "PersonalProfile", "UK"));
+            var objFiles = UKImages.OrderBy(m => m.LastModified);
             UKData = new List<Timeline>();
 
             foreach (var item in objFiles.ToList())
@@ -41,7 +43,8 @@ namespace ResumeWebsite.Pages
                 string[] fileinfo = item.Name.Split('_');
                 UKData.Add(new Timeline()
                 {
-                    Date = fileinfo[1],
+                    Date = DateTime.ParseExact(fileinfo[1], "yyyyMMdd", cultureInfo).ToString("dd MMM yyyy"),
+                    DateInt = Convert.ToInt32(fileinfo[1]),
                     Location = fileinfo[2][0..^4],
                     Div01 = Path.Combine("images/PersonalProfile/UK", item.Name)
                 });
@@ -249,6 +252,7 @@ namespace ResumeWebsite.Pages
     {
         public string Title { get; set; }
         public string Location { get; set; }
+        public int DateInt { get; set; }
         public string Date { get; set; }
         public string Flight { get; set; }
         public string Div01 { get; set; }

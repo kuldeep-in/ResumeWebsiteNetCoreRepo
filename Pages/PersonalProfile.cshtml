@@ -130,11 +130,18 @@
                                     </div>
                                 </div>
                                 <div class="col-md-4">
-                                    Coming soon...
+                                    <img src="@item.Div01"/>
                                 </div>
-                                <div class="col-md-5">
-                                    <embed height="550" width="400" src="@String.Format(item.Div02, @Configuration["BlobURL"], @Configuration["SASToken"])" />
-                                </div>
+                                @if (item.Div02.Contains("pdf") || item.Div02.Contains("https:")){
+                                    <div class="col-md-5">
+                                        <embed src="@item.Div02#toolbar=0" type="application/pdf" width="100%" height="100%"/>
+                                    </div>
+                                }
+                                else{
+                                    <div class="col-md-5">
+                                        <img src="@item.Div02"/>
+                                    </div>
+                                }
                              </div>
                         </div>
                     }

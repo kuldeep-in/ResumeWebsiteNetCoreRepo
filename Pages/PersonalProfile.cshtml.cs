@@ -77,31 +77,31 @@ namespace ResumeWebsite.Pages
                     Date = "26 Aug 2018",
                     Location = "Hyderabad",
                     TimeTaken = "02:23:15",
-                    Div01 = "images/Marathon/H14_Hyderabad2018.pdf",
-                    Div02 = "images/Marathon/H14_Hyderabad2018.pdf"
+                    Div01 = "images/Marathon/IMG_20180826_193236.jpg",
+                    Div02 = "https://www.timingindia.com/certificate/MzA4NTpINDAyOTo1NzE6JkkmNzY="
                 },
                 new Marathon()
                 {
                     Date = "19 Nov 2017",
                     Location = "Delhi",
                     TimeTaken = "2:09:05",
-                    Div01 = "images/Marathon/H13_Delhi2017.pdf",
-                    Div02 = "images/Marathon/H13_Delhi2017.pdf"
+                    Div01 = "images/Marathon/IMG_20171119_214349.jpg",
+                    Div02 = $"images/Marathon/H13_Delhi2017.pdf"
                 },
                 new Marathon()
                 {
                     Date = "20 Aug 2017",
                     Location = "Hyderabad",
                     TimeTaken = "2:12:50",
-                    Div01 = "images/Marathon/H12_Hyderabad2017.pdf",
-                    Div02 = "images/Marathon/H12_Hyderabad2017.pdf"
+                    Div01 = "images/Marathon/IMG_20170820_214727.jpg",
+                    Div02 = "https://www.timingindia.com/certificate/MjgzMzpIMjQwNzo0MTc6JkkmNzY="
                 },
                 new Marathon()
                 {
                     Date = "16 Oct 2016",
                     Location = "Pune",
                     TimeTaken = "2:42:56",
-                    Div01 = "images/Marathon/H11_Pune.jpg",
+                    Div01 = "images/Marathon/IMG_20161016_102626.jpg",
                     Div02 = "images/Marathon/H11_Pune.jpg"
                 },
                 new Marathon()
@@ -109,7 +109,7 @@ namespace ResumeWebsite.Pages
                     Date = "28 Aug 2016",
                     Location = "Hyderabad",
                     TimeTaken = "2:33:29",
-                    Div01 = "images/Marathon/H10_Hyderabad.pdf",
+                    Div01 = "images/Marathon/IMG_20160828_091207.jpg",
                     Div02 = "images/Marathon/H10_Hyderabad.pdf"
                 },
                 new Marathon()
@@ -117,7 +117,7 @@ namespace ResumeWebsite.Pages
                     Date = "29 Nov 2015",
                     Location = "Delhi",
                     TimeTaken = "2:08:44",
-                    Div01 = "images/Marathon/H09_Delhi_291115.pdf",
+                    Div01 = "images/Marathon/IMG_20151129_100714.jpg",
                     Div02 = "images/Marathon/H09_Delhi_291115.pdf"
                 },
                 new Marathon()
@@ -125,15 +125,23 @@ namespace ResumeWebsite.Pages
                     Date = "01 Nov 2015",
                     Location = "Gurgram",
                     TimeTaken = "02:06:07",
-                    Div01 = "images/Marathon/H08_Gurgoan_011115.pdf",
+                    Div01 = "images/Marathon/IMG_20151101_081332.jpg",
                     Div02 = "images/Marathon/H08_Gurgoan_011115.pdf"
                 },
-                new Marathon()
+                new Marathon() //H07
+                {
+                    Date = "30 Aug 2015",
+                    Location = "Hyderabad",
+                    TimeTaken = "02:15:28",
+                    Div01 = "images/Marathon/IMG_20150830_090009.jpg",
+                    Div02 = "https://www.timingindia.com/certificate/MjM5MDpIMjE3OToxOTc6JkkmNzY="
+                },
+                new Marathon() //H06
                 {
                     Date = "26 Jul 2015",
                     Location = "Kathgodam",
                     TimeTaken = "00:00:00",
-                    Div01 = "",
+                    Div01 = "images/Marathon/IMG_20150726_091414.jpg",
                     Div02 = ""
                 },
                 new Marathon()
@@ -141,7 +149,7 @@ namespace ResumeWebsite.Pages
                     Date = "10 May 2015",
                     Location = "Pune",
                     TimeTaken = "02:23:46",
-                    Div01 = "images/Marathon/H05_Pune_100515.pdf",
+                    Div01 = "images/Marathon/IMG_20150510_074109.jpg",
                     Div02 = "images/Marathon/H05_Pune_100515.pdf"
                 },
                 new Marathon()
@@ -149,7 +157,7 @@ namespace ResumeWebsite.Pages
                     Date = "25 May 2015",
                     Location = "Kundalika",
                     TimeTaken = "02:48:20",
-                    Div01 = "",
+                    Div01 = "images/Marathon/IMG_20150328_092700.jpg",
                     Div02 = "images/Marathon/H04_Kundalika_28052015.pdf"
                 },
                 new Marathon()
@@ -157,7 +165,7 @@ namespace ResumeWebsite.Pages
                     Date = "07 Dec 2014",
                     Location = "Pune",
                     TimeTaken = "01:55:11",
-                    Div01 = "",
+                    Div01 = "images/Marathon/IMG_20141207_022118.jpg",
                     Div02 = "images/Marathon/H03_Pune_071214.pdf"
                 },
                 new Marathon()
@@ -165,7 +173,7 @@ namespace ResumeWebsite.Pages
                     Date = "24 Aug 2014",
                     Location = "Hyderabad",
                     TimeTaken = "02:23:26",
-                    Div01 = "",
+                    Div01 = "images/Marathon/IMG_20140824_095656.jpg",
                     Div02 = "images/Marathon/H02_Hyderabad_240814.pdf"
                 },
                 new Marathon()
@@ -173,15 +181,23 @@ namespace ResumeWebsite.Pages
                     Date = "16 Feb 2014",
                     Location = "Mumbai",
                     TimeTaken = "02:26:24",
-                    Div01 = "",
+                    Div01 = "images/Marathon/IMG_20140216_044356.jpg",
                     Div02 = "images/Marathon/H01_Mumbai_160214.pdf"
+                },
+                new Marathon()
+                {
+                    Date = "27 Nov 2016",
+                    Location = "Hyderabad",
+                    TimeTaken = "00:57:49",
+                    Div01 = "images/Marathon/IMG_20161127_060927.jpg",
+                    Div02 = "images/Marathon/10k03_Hyderabad_27nov16.pdf"
                 },
                 new Marathon()
                 {
                     Date = "30 March 14",
                     Location = "Pune",
                     TimeTaken = "00:50:00",
-                    Div01 = "",
+                    Div01 = "images/Marathon/IMG_20140330_095438.jpg",
                     Div02 = "images/Marathon/10k02_Pune_30mar14.png"
                 },
                 new Marathon()
@@ -189,16 +205,8 @@ namespace ResumeWebsite.Pages
                     Date = "01 Dec 2013",
                     Location = "Pune",
                     TimeTaken = "00:54:10",
-                    Div01 = "",
+                    Div01 = "images/Marathon/IMG_20131201_084028.jpg",
                     Div02 = "images/Marathon/10k01_Pune_01dec13.pdf"
-                },
-                new Marathon()
-                {
-                    Date = "27 Nov 2016",
-                    Location = "Hyderabad",
-                    TimeTaken = "00:57:49",
-                    Div01 = "",
-                    Div02 = "images/Marathon/10k03_Hyderabad_27nov16.pdf"
                 }
             };
 

@@ -53,13 +53,13 @@
                                 <div class="h2">Kuldeep Singh</div>
                             </div>
                             <div class="col-md-2 d-none d-md-block">
-                                <button class="tablink" onclick="openTab('tabTL', this, '#236bff')" id="defaultOpen">Timeline</button>
+                                <button class="tablink" onclick="openTab('tabTL', this, '#236bff')">Timeline</button>
                                 <button class="tablink" onclick="openTab('tabM', this, '#236bff')">Marathon</button>
                             </div>
                             <div class="col-md-2 d-none d-md-block">
                                 <button class="tablink" onclick="openTab('tabIN', this, '#236bff')">India</button>  
                                 <button class="tablink" onclick="openTab('tabUSA', this, 'green')" >USA</button>
-                                <button class="tablink" onclick="openTab('tabUK', this, '#236bff')">UK</button>
+                                <button class="tablink" onclick="openTab('tabUK', this, '#236bff')" id="defaultOpen">UK</button>
                                 <button class="tablink" onclick="openTab('tabNL', this, '#236bff')">Netherlands</button>  
                             </div>
                             <div class="col-md-2 d-none d-md-block">
@@ -179,7 +179,7 @@
                 <div class="container cc-experience">
                     <div class="h4 text-center mb-4 title">USA</div>
                     
-                    @foreach(var item in Model.IndiaData)
+                    @foreach(var item in Model.USAData)
                     {
                         <div class="card col-md-3">  
                             <div class="bg-primary">
@@ -231,7 +231,7 @@
                 <div class="container cc-experience">
                     <div class="h4 text-center mb-4 title">Netherlands</div>
                     
-                    @foreach(var item in Model.IndiaData)
+                    @foreach(var item in Model.NLData)
                     {
                         <div class="card col-md-3">  
                             <div class="bg-primary">

@@ -15,8 +15,10 @@ namespace ResumeWebsite.Pages
     {
         public IList<Marathon> MarathonData { get; set; }
         public IList<Timeline> TimeLineList { get; set; }
+        public IList<Timeline> NLData { get; set; }
         public IList<Timeline> IndiaData { get; set; }
         public IList<Timeline> UKData { get; set; }
+        public IList<Timeline> USAData { get; set; }
         //public IList<Timeline> TimelineData { get; set; }
 
         public IConfiguration Configuration { get; }
@@ -30,25 +32,11 @@ namespace ResumeWebsite.Pages
 
         public void OnGet()
         {
-            //string BlobURL = Configuration.GetSection("BlobURL").Value;
-            //string SASToken = Configuration.GetSection("SASToken").Value;
-            CultureInfo cultureInfo = CultureInfo.InvariantCulture;
-            var provider = new PhysicalFileProvider(webHostEnvironment.WebRootPath);
-            var UKImages = provider.GetDirectoryContents(Path.Combine("images", "PersonalProfile", "UK"));
-            var objFiles = UKImages.OrderBy(m => m.LastModified);
-            UKData = new List<Timeline>();
-
-            foreach (var item in objFiles.ToList())
-            {
-                string[] fileinfo = item.Name.Split('_');
-                UKData.Add(new Timeline()
-                {
-                    Date = DateTime.ParseExact(fileinfo[1], "yyyyMMdd", cultureInfo).ToString("dd MMM yyyy"),
-                    DateInt = Convert.ToInt32(fileinfo[1]),
-                    Location = fileinfo[2][0..^4],
-                    Div01 = Path.Combine("images/PersonalProfile/UK", item.Name)
-                });
-            }
+            
+            UKData = GetFiles("UK");
+            IndiaData = GetFiles("IN");
+            USAData = GetFiles("USA");
+            NLData = GetFiles("NL");
 
             TimeLineList = new List<Timeline>
             {
@@ -210,40 +198,29 @@ namespace ResumeWebsite.Pages
                 }
             };
 
-            IndiaData = new List<Timeline>
-            {
-                new Timeline()
-                {
-                    Date = "11 Jan 2020",
-                    Location = "IN 01",
-                    Div01 = "images/PersonalProfile/UK/IMG_20191226_150721~2.jpg"
-                },
-                new Timeline()
-                {
-                    Date = "11 Jan 2020",
-                    Location = "IN 01",
-                    Div01 = "images/PersonalProfile/UK/IMG_20191226_150721~2.jpg"
-                },
-                new Timeline()
-                {
-                    Date = "11 Jan 2020",
-                    Location = "IN 01",
-                    Div01 = "images/PersonalProfile/UK/IMG_20191226_150721~2.jpg"
-                },
-                new Timeline()
-                {
-                    Date = "11 Jan 2020",
-                    Location = "IN 01",
-                    Div01 = "images/PersonalProfile/UK/IMG_20191226_150721~2.jpg"
-                },
-                new Timeline()
-                {
-                    Date = "11 Jan 2020",
-                    Location = "IN 01",
-                    Div01 = "images/PersonalProfile/UK/IMG_20191226_150721~2.jpg"
-                }
-            };
+        }
 
+        private List<Timeline> GetFiles(string folderId)
+        {
+            var provider = new PhysicalFileProvider(webHostEnvironment.WebRootPath);
+            CultureInfo cultureInfo = CultureInfo.InvariantCulture;
+            var FileList = provider.GetDirectoryContents(Path.Combine("images", "PersonalProfile", folderId));
+            List<Timeline> OutputData = new List<Timeline>();
+            //var INFiles = INImages.OrderByDescending(m => m.Name);
+
+            foreach (var item in FileList.OrderByDescending(m => m.Name).ToList())
+            {
+                string[] fileinfo = item.Name.Split('_');
+                OutputData.Add(new Timeline()
+                {
+                    Date = DateTime.ParseExact(fileinfo[1], "yyyyMMdd", cultureInfo).ToString("MMM yyyy"),
+                    DateInt = Convert.ToInt32(fileinfo[1]),
+                    Location = fileinfo.Last()[0..^4],
+                    Div01 = Path.Combine("images/PersonalProfile", folderId, item.Name)
+                });
+            }
+
+            return OutputData;
         }
     }
 

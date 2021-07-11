@@ -1,0 +1,27 @@
+﻿
+@model ResumeWebsite.ViewModels.PersonalProfilePage
+
+<div class="section tabcontent-pp" id="@Model.SectionId">
+    <div class="container cc-experience">
+        <div class="h4 text-center mb-4 title">@Model.PageTitle</div>
+                    
+        @foreach(var item in Model.SectionFiles)
+        {
+            <div class="card col-md-3">  
+                <div class="bg-primary">
+                    <div>
+                        <img src="@item.Div01" />
+                    </div>
+                    <div class="card-body-pp cc-experience-header-pp">
+                        <div class="h6">
+                            <i class="fa fa-map-marker"></i> <span> @item.Location</span>
+                        </div>
+                        <div class="h6">
+                            <i class="fa fa-calendar"></i> <span> @item.Date</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

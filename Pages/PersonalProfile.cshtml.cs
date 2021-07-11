@@ -2,9 +2,11 @@
 namespace ResumeWebsite.Pages
 {
     using Microsoft.AspNetCore.Hosting;
+    using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.RazorPages;
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.FileProviders;
+    using ResumeWebsite.ViewModels;
     using System;
     using System.Collections.Generic;
     using System.Globalization;
@@ -15,10 +17,10 @@ namespace ResumeWebsite.Pages
     {
         public IList<Marathon> MarathonData { get; set; }
         public IList<Timeline> TimeLineList { get; set; }
-        public IList<Timeline> NLData { get; set; }
-        public IList<Timeline> IndiaData { get; set; }
-        public IList<Timeline> UKData { get; set; }
-        public IList<Timeline> USAData { get; set; }
+        public PersonalProfilePage NLData { get; set; }
+        public PersonalProfilePage IndiaData { get; set; }
+        public PersonalProfilePage UKData { get; set; }
+        public PersonalProfilePage USAData { get; set; }
         //public IList<Timeline> TimelineData { get; set; }
 
         public IConfiguration Configuration { get; }
@@ -30,13 +32,17 @@ namespace ResumeWebsite.Pages
             this.webHostEnvironment = webHostEnvironment;
         }
 
+        //#region snippet_OnGetPartial
+        //public IActionResult OnGetPartial() =>
+        //    Partial("_INDView");
+        //#endregion
+
         public void OnGet()
         {
-            
-            UKData = GetFiles("UK");
-            IndiaData = GetFiles("IN");
-            USAData = GetFiles("USA");
-            NLData = GetFiles("NL");
+            UKData = GetProfilePageSection("tabUK", "UK", "UK");
+            IndiaData = GetProfilePageSection("tabIN", "India", "IN");
+            USAData = GetProfilePageSection("tabUSA", "USA", "USA"); ;
+            NLData = GetProfilePageSection("tabNL", "NL", "NL"); ;
 
             TimeLineList = new List<Timeline>
             {
@@ -222,25 +228,38 @@ namespace ResumeWebsite.Pages
 
             return OutputData;
         }
-    }
 
-    public class Marathon
-    {
-        public string Location { get; set; }
-        public string Date { get; set; }
-        public string TimeTaken { get; set; }
-        public string Div01 { get; set; }
-        public string Div02 { get; set; }
-    }
+        private PersonalProfilePage GetProfilePageSection(string sectionId, string title, string folderId)
+        {
+            var provider = new PhysicalFileProvider(webHostEnvironment.WebRootPath);
+            CultureInfo cultureInfo = CultureInfo.InvariantCulture;
+            var FileList = provider.GetDirectoryContents(Path.Combine("images", "PersonalProfile", folderId));
+            //List<Timeline> OutputData = new List<Timeline>();
+            //var INFiles = INImages.OrderByDescending(m => m.Name);
+            PersonalProfilePage outputData = new PersonalProfilePage()
+            {
+                SectionId = sectionId,
+                PageTitle = title
+            };
 
-    public class Timeline
-    {
-        public string Title { get; set; }
-        public string Location { get; set; }
-        public int DateInt { get; set; }
-        public string Date { get; set; }
-        public string Flight { get; set; }
-        public string Div01 { get; set; }
-        public string Div02 { get; set; }
+            foreach (var item in FileList.OrderByDescending(m => m.Name).ToList())
+            {
+                string[] fileinfo = item.Name.Split('_');
+                outputData.SectionFiles.Add(new Timeline()
+                {
+                    Date = DateTime.ParseExact(fileinfo[1], "yyyyMMdd", cultureInfo).ToString("MMM yyyy"),
+                    DateInt = Convert.ToInt32(fileinfo[1]),
+                    Location = fileinfo.Last()[0..^4],
+                    Div01 = Path.Combine("images/PersonalProfile", folderId, item.Name)
+                });
+            }
+
+            return outputData;
+        }
+
+        public IEnumerable<Timeline> GetIndData()
+        {
+            return GetFiles("IND");
+        }
     }
 }

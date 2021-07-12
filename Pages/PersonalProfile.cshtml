@@ -110,70 +110,44 @@
 
             @*Tab: Marathon*@
             <div class="section tabcontent-pp" id="tabM">
-                <div class="container cc-experience">
-                    <div class="h4 text-center mb-4 title">Marathon</div>
-                    @foreach(var item in Model.MarathonData)
-                    {
-                        <div class="card">
-                            <div class="row">
-                                <div class="col-md-3 bg-primary">
-                                    <div class="card-body cc-experience-header">
-                                        <div class="h5">
-                                            <i class="fa fa-map-marker"></i> <span> @item.Location</span>
-                                        </div>
-                                        <div class="h5">
-                                            <i class="fa fa-calendar"></i> <span> @item.Date</span>
-                                        </div>
-                                        <div class="h5">
-                                            <i class="fa fa-clock-o"></i> <span> @item.TimeTaken</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <img src="@item.Div01"/>
-                                </div>
-                                @if (item.Div02.Contains("pdf") || item.Div02.Contains("https:")){
-                                    <div class="col-md-5">
-                                        <embed src="@item.Div02#toolbar=0" type="application/pdf" width="100%" height="100%"/>
-                                    </div>
-                                }
-                                else{
-                                    <div class="col-md-5">
-                                        <img src="@item.Div02"/>
-                                    </div>
-                                }
-                             </div>
-                        </div>
-                    }
-                </div>
+                @await Html.PartialAsync("_MarathonView", 
+                                Model.MarathonData,
+                                new ViewDataDictionary(ViewData))
             </div>
 
             @*Tab: IND*@
-            @await Html.PartialAsync("_ProfilePageSectionView", 
+            <div class="section tabcontent-pp" id="tabIN">
+                @await Html.PartialAsync("_ProfilePageSectionView", 
                                 Model.IndiaData,
                                 new ViewDataDictionary(ViewData))
+            </div>
 
             @*Tab: USA*@
-            @await Html.PartialAsync("_ProfilePageSectionView", 
+            <div class="section tabcontent-pp" id="tabUSA">
+                @await Html.PartialAsync("_ProfilePageSectionView", 
                                 Model.USAData,
                                 new ViewDataDictionary(ViewData))
+            </div>
 
             @*Tab: UK*@
-            @await Html.PartialAsync("_ProfilePageSectionView", 
+            <div class="section tabcontent-pp" id="tabUK">
+                @await Html.PartialAsync("_ProfilePageSectionView", 
                                 Model.UKData,
                                 new ViewDataDictionary(ViewData))
+            </div>
 
             @*Tab: Netherlands*@
-            @await Html.PartialAsync("_ProfilePageSectionView", 
+            <div class="section tabcontent-pp" id="tabNL">
+                @await Html.PartialAsync("_ProfilePageSectionView", 
                                 Model.NLData,
                                 new ViewDataDictionary(ViewData))
+            </div>
 
             @*Tab: Germany*@
             <div class="section tabcontent-pp" id="tabDE">
-                <div class="container cc-experience">
-                    <div class="h4 text-center mb-4 title">Germany</div>
-                    
-                </div>
+                @await Html.PartialAsync("_ProfilePageSectionView", 
+                                Model.DEData,
+                                new ViewDataDictionary(ViewData))
             </div>
 
             @*Tab: UAE*@
@@ -194,10 +168,9 @@
 
             @*Tab: SEA*@
             <div class="section tabcontent-pp" id="tabSEA">
-                <div class="container cc-experience">
-                    <div class="h4 text-center mb-4 title">SEA</div>
-                    
-                </div>
+                @await Html.PartialAsync("_ProfilePageSectionView", 
+                                Model.SEAData,
+                                new ViewDataDictionary(ViewData))
             </div>
 
             <div class="section">

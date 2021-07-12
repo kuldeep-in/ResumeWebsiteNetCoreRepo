@@ -21,6 +21,8 @@ namespace ResumeWebsite.Pages
         public PersonalProfilePage IndiaData { get; set; }
         public PersonalProfilePage UKData { get; set; }
         public PersonalProfilePage USAData { get; set; }
+        public PersonalProfilePage SEAData { get; set; }
+        public PersonalProfilePage DEData { get; set; }
         //public IList<Timeline> TimelineData { get; set; }
 
         public IConfiguration Configuration { get; }
@@ -43,6 +45,8 @@ namespace ResumeWebsite.Pages
             IndiaData = GetProfilePageSection("tabIN", "India", "IN");
             USAData = GetProfilePageSection("tabUSA", "USA", "USA"); ;
             NLData = GetProfilePageSection("tabNL", "NL", "NL"); ;
+            SEAData = GetProfilePageSection("tabSEA", "SEA", "SEA"); ;
+            DEData = GetProfilePageSection("tabDE", "Germany", "DE"); ;
 
             TimeLineList = new List<Timeline>
             {
@@ -242,8 +246,7 @@ namespace ResumeWebsite.Pages
             var provider = new PhysicalFileProvider(webHostEnvironment.WebRootPath);
             CultureInfo cultureInfo = CultureInfo.InvariantCulture;
             var FileList = provider.GetDirectoryContents(Path.Combine("images", "PersonalProfile", folderId));
-            //List<Timeline> OutputData = new List<Timeline>();
-            //var INFiles = INImages.OrderByDescending(m => m.Name);
+
             PersonalProfilePage outputData = new PersonalProfilePage()
             {
                 SectionId = sectionId,

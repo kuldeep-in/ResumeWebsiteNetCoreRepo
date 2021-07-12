@@ -76,6 +76,14 @@ namespace ResumeWebsite.Pages
                 },
                 new Marathon()
                 {
+                    Date = "28 Jan 2018",
+                    Location = "Hampi",
+                    TimeTaken = "00:00:00",
+                    Div01 = "images/Marathon/IMG_20180126_163055016_Hampi.jpg",
+                    Div02 = "images/Marathon/IMG_20180126_163055017_Hampi.jpg"
+                },
+                new Marathon()
+                {
                     Date = "19 Nov 2017",
                     Location = "Delhi",
                     TimeTaken = "2:09:05",

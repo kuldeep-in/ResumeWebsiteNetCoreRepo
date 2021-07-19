@@ -74,7 +74,7 @@
                                     <a class="btn btn-default btn-round btn-lg btn-icon" style="cursor:pointer;" href="mailto:in.singhkuldeep@gmail.com" rel="tooltip" title="Email me at in.singhkuldeep@gmail.com">
                                         <i class="fa fa-envelope-o"></i>
                                     </a>
-                                    <a class="btn btn-default btn-round btn-lg btn-icon" style="cursor:pointer;" href="./PersonalProfile" rel="tooltip" title="Go to Personal Profile" target="_new">
+                                    <a class="btn btn-default btn-round btn-lg btn-icon" style="cursor:pointer;" href="#" rel="tooltip" title="Go to Personal Profile" target="_new">
                                         <i class="fa fa-user-circle-o"></i>
                                     </a>
                                 </div>
@@ -129,22 +129,10 @@
                     <div class="h4 text-center mb-4 title">Professional Skills</div>
                     <div class="card" style="background-color:#dddddd">
                         <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <span class="btn btn-primary">.net (C#)</span>
-                                    <span class="btn btn-primary">Azure Web/ Compute</span>
-                                    <span class="btn btn-primary">SQL Azure</span>
-                                    <span class="btn btn-primary">Cosmos DB</span>
-                                    <span class="btn btn-primary">Solution Design</span>
-                                    <span class="btn btn-primary">Azure Storage</span>
-                                    <span class="btn btn-primary">Azure DevOps</span>
-                                    <span class="btn btn-primary">Power BI</span>
-                                    <span class="btn btn-primary">Azure Data Factory</span>
-                                    <span class="btn btn-primary">Agile / Scrum</span>
-                                    <span class="btn btn-primary">PowerShell</span>
-                                    <span class="btn btn-primary">Xamarin</span>
-                                </div>
-                            </div>
+                            @foreach(var item in Model.Technologies)
+                            {
+                                <span  class="btn btn-primary">@item</span>
+                            }
                         </div>
                     </div>
                 </div>

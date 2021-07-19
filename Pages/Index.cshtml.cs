@@ -9,6 +9,7 @@ namespace ResumeWebsite.Pages
     {
         private readonly ILogger<IndexModel> _logger;
         public IList<string> Badges { get; set; }
+        public IList<string> Technologies { get; set; }
         public IList<string> Certificates { get; set; }
 
         public IndexModel(ILogger<IndexModel> logger)
@@ -49,6 +50,26 @@ namespace ResumeWebsite.Pages
                 "images/Certificates/05-AzAdminAssociate-cert.png",
                 "images/Certificates/06-DevAssociate-cert.png"
 
+            };
+
+            Technologies = new List<string>
+            {
+                ".net(C#)",
+                ".net CORE",
+                "PowerShell",
+                "Azure Web/ Compute",
+                "Azure SQL",
+                "Cosmos DB",
+                "Azure Storage",
+                "Azure Data Factory",
+                "Azure Synapse",
+                "Eventing and Messeging",
+                "Application Monitoring",
+                "Azure Automation",
+                "Azure DevOps",
+                "Power BI",
+                "Agile / Scrum",
+                "Solution Design"
             };
         }
     }

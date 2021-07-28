@@ -34,11 +34,6 @@ namespace ResumeWebsite.Pages
             this.webHostEnvironment = webHostEnvironment;
         }
 
-        //#region snippet_OnGetPartial
-        //public IActionResult OnGetPartial() =>
-        //    Partial("_INDView");
-        //#endregion
-
         public void OnGet()
         {
             UKData = GetProfilePageSection("tabUK", "UK", "UK");

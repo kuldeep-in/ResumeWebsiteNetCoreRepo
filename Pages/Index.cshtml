@@ -145,27 +145,29 @@
                             <div class="h4 text-center mb-4 title">Certifications</div>
                         </div>
                     </div>
-                    <div class="tab-content gallery">
-                        <div class="tab-pane active">
-                            <div class="ml-auto mr-auto">
-                                <div class="row">
-                                @foreach(var item in Model.Badges)
-                                {
-                                    <div class="cc-porfolio-image img-raised">
-                                        <a href="#">
-                                            <figure class="cc-effect">
-                                                <img src="@item" alt="Image" />
-                                            </figure>
-                                        </a>
+                    <div class="container cc-experience">
+                    @foreach(var item in Model.CredlyBadges.OrderByDescending(x=>x.Title))
+                    {
+                        <div class="card" style="width:33%">
+                            <div class="row">
+                                <div class="col-md-5" style="background-color:#cccccc">
+                                    <div class="cc-experience-header text-center">
+                                        <img src="@item.BadgeURL" onerror="this.src='@item.BadgeURLFallBack'" />
                                     </div>
-                                }
+                                </div>
+                                <div class="col-md-7">
+                                    <div class="card-body">
+                                        <div class="h6">@item.Title</div>
+                                        <div class="">@item.SubTitle</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                    }
                     </div>
                 </div>
             </div>
-
+            
             <div class="section" id="experience">
                 <div class="container cc-experience">
                     <div class="h4 text-center mb-4 title">Work Experience</div>

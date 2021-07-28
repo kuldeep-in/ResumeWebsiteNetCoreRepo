@@ -31,4 +31,14 @@ namespace ResumeWebsite.ViewModels
         public string Div01 { get; set; }
         public string Div02 { get; set; }
     }
+
+    public class BadgesfromCredly
+    {
+        public string Title { get; set; }
+        public string SubTitle { get; set; }
+        public string BadgeURL { get; set; }
+        public string BadgeURLFallBack { get; set; }
+        public string CertificateURL { get; set; }
+
+    }
 }

@@ -37,6 +37,7 @@
     @{
         var bannerURL = string.Format("{0}/images/cloudbanner.jpg{1}", Configuration["BlobURL"], Configuration["SASToken"]);
         var profileImgURL = string.Format("{0}/images/kd.jpg{1}", Configuration["BlobURL"], Configuration["SASToken"]);
+        var resumeURL = string.Format("{0}/resume/KuldeepSingh_Resume.pdf{1}", Configuration["BlobURL"], Configuration["SASToken"]);
     }
     <header>
         <div class="profile-page sidebar-collapse">
@@ -58,7 +59,7 @@
                                 <div class="cc-profile-image"><a href="#"><img src="@profileImgURL" alt="Image" /></a></div>
                                 <div class="h2 title">Kuldeep Singh</div>
                                 <p class="category text-white">Architect | Consultant | Data Engineer</p>
-                                <button class="btn btn-primary" style="cursor:pointer;width:200px;" type="submit" onclick="window.open('@Configuration["ResumeURL"]')">
+                                <button class="btn btn-primary" style="cursor:pointer;width:200px;" type="submit" onclick="window.open('@resumeURL')">
                                     <i class="fa fa-download"></i> Download CV
                                 </button>
                             </div>

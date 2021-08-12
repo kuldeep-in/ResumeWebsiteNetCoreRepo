@@ -8,22 +8,27 @@ namespace ResumeWebsite.Pages
     using System.Collections.Generic;
     using System.Linq;
     using ResumeWebsite.ViewModels;
+    using Microsoft.Extensions.Configuration;
 
     public class IndexModel : PageModel
     {
+        public IConfiguration Configuration { get; }
         private readonly ILogger<IndexModel> _logger;
         public IList<string> Badges { get; set; }
         public IList<BadgesfromCredly> CredlyBadges { get; set; }
         public IList<string> Technologies { get; set; }
         public IList<string> Certificates { get; set; }
 
-        public IndexModel(ILogger<IndexModel> logger)
+        public IndexModel(IConfiguration configuration, ILogger<IndexModel> logger)
         {
             _logger = logger;
+            Configuration = configuration;
         }
 
         public void OnGet()
         {
+            string BlobURL = Configuration.GetSection("BlobURL").Value;
+            string SASToken = Configuration.GetSection("SASToken").Value;
 
             System.Net.WebClient webClient = new System.Net.WebClient
             {
@@ -44,16 +49,16 @@ namespace ResumeWebsite.Pages
                 {
                     Title = "Accredited: Azure Cosmos DB",
                     SubTitle = "Microsoft Learn",
-                    BadgeURL = "images/Badges/cosmosL200.jpg",
-                    BadgeURLFallBack = "images/Badges/cosmosL200.jpg",
+                    BadgeURL = string.Format("{0}/images/Badges/cosmosL200.jpg{1}", BlobURL, SASToken),
+                    BadgeURLFallBack = "",
                     CertificateURL = ""
                 },
                 new BadgesfromCredly
                 {
                     Title = "Accredited: Azure Data Factory",
                     SubTitle = "Microsoft Learn",
-                    BadgeURL = "images/Badges/adf.png",
-                    BadgeURLFallBack = "images/Badges/adf.png",
+                    BadgeURL = string.Format("{0}/images/Badges/adf.png{1}", BlobURL, SASToken),
+                    BadgeURLFallBack = "",
                     CertificateURL = ""
                 },
             };
@@ -68,7 +73,7 @@ namespace ResumeWebsite.Pages
                 {
                     Title = item01.InnerText.Trim(),
                     SubTitle = item02.InnerText.Trim(),
-                    BadgeURL = string.Format("images/Badges/{0}.png", item01.InnerText.Trim().Replace(" ", "").Replace(":", "")),
+                    BadgeURL = string.Format("{1}/images/Badges/{0}.png{2}", item01.InnerText.Trim().Replace(" ", "").Replace(":", ""), BlobURL, SASToken),
                     BadgeURLFallBack = item03.Attributes["src"].Value,
                     CertificateURL = string.Format("https://www.credly.com/{0}", item04.Attributes["href"].Value)
                 });
@@ -76,35 +81,34 @@ namespace ResumeWebsite.Pages
 
             Badges = new List<string>
             {
-                "images/Badges/01-AzSolutionArchitect-badge.png",
-                "images/Badges/02-DevOpsExpert-badge.png",
-                "images/Badges/03-AzDataEngineer-badge.png",
-                "images/Badges/04-DataAnalystAssociate-badge.png",
-                "images/Badges/04-DatabaseAdministrator-badge.png",
-                "images/Badges/azureAdministrator600.png",
-                "images/Badges/azuredeveloperassociate600.png",
-                "images/Badges/adf.png",
-                "images/Badges/cosmosL200.jpg",
-                "images/Badges/accessibility.png",
+                string.Format("{0}/images/Badges/01-AzSolutionArchitect-badge.png{1}", BlobURL, SASToken),
+                string.Format("{0}/images/Badges/02-DevOpsExpert-badge.png{1}", BlobURL, SASToken),
+                string.Format("{0}/images/Badges/03-AzDataEngineer-badge.png{1}", BlobURL, SASToken),
+                string.Format("{0}/images/Badges/04-DataAnalystAssociate-badge.png{1}", BlobURL, SASToken),
+                string.Format("{0}/images/Badges/04-DatabaseAdministrator-badge.png{1}", BlobURL, SASToken),
+                string.Format("{0}/images/Badges/azureAdministrator600.png{1}", BlobURL, SASToken),
+                string.Format("{0}/images/Badges/azuredeveloperassociate600.png{1}", BlobURL, SASToken),
+                string.Format("{0}/images/Badges/adf.png{1}", BlobURL, SASToken),
+                string.Format("{0}/images/Badges/cosmosL200.jpg{1}", BlobURL, SASToken),
+                string.Format("{0}/images/Badges/accessibility.png{1}", BlobURL, SASToken),
                 //"images/Badges/xamarin.png",
-                "images/Badges/01-exam-az300.png",
-                "images/Badges/01-exam-az301.png",
-                "images/Badges/02-exam-az400.png",
-                "images/Badges/03-exam-dp200.png",
-                "images/Badges/03-exam-dp201.png"
+                string.Format("{0}/images/Badges/01-exam-az300.png{1}", BlobURL, SASToken),
+                string.Format("{0}/images/Badges/01-exam-az301.png{1}", BlobURL, SASToken),
+                string.Format("{0}/images/Badges/02-exam-az400.png{1}", BlobURL, SASToken),
+                string.Format("{0}/images/Badges/03-exam-dp200.png{1}", BlobURL, SASToken),
+                string.Format("{0}/images/Badges/03-exam-dp201.png{1}", BlobURL, SASToken)
             };
 
             Certificates = new List<string>
             {
-                "images/Certificates/5.AzureCertificate.jpg",
-                "images/Certificates/01-AzSolutionArchitect-cert.png",
-                "images/Certificates/02-DevOpsExpert-cert.png",
-                "images/Certificates/03-AzDataEngineer-cert.png",
-                "images/Certificates/04-DataAnalystAssociate-cert.png",
-                "images/Certificates/04-DatabaseAdministrator-cert.png",
-                "images/Certificates/05-AzAdminAssociate-cert.png",
-                "images/Certificates/06-DevAssociate-cert.png"
-
+                string.Format("{0}/images/Certificates/5.AzureCertificate.jpg{1}", BlobURL, SASToken),
+                string.Format("{0}/images/Certificates/01-AzSolutionArchitect-cert.png{1}", BlobURL, SASToken),
+                string.Format("{0}/images/Certificates/02-DevOpsExpert-cert.png{1}", BlobURL, SASToken),
+                string.Format("{0}/images/Certificates/03-AzDataEngineer-cert.png{1}", BlobURL, SASToken),
+                string.Format("{0}/images/Certificates/04-DataAnalystAssociate-cert.png{1}", BlobURL, SASToken),
+                string.Format("{0}/images/Certificates/04-DatabaseAdministrator-cert.png{1}", BlobURL, SASToken),
+                string.Format("{0}/images/Certificates/05-AzAdminAssociate-cert.png{1}", BlobURL, SASToken),
+                string.Format("{0}/images/Certificates/06-DevAssociate-cert.png{1}", BlobURL, SASToken)
             };
 
             Technologies = new List<string>

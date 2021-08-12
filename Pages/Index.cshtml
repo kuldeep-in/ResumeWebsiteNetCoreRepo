@@ -34,6 +34,10 @@
         </script>
 </head>
 <body id="top">
+    @{
+        var bannerURL = string.Format("{0}/images/cloudbanner.jpg{1}", Configuration["BlobURL"], Configuration["SASToken"]);
+        var profileImgURL = string.Format("{0}/images/kd.jpg{1}", Configuration["BlobURL"], Configuration["SASToken"]);
+    }
     <header>
         <div class="profile-page sidebar-collapse">
             <nav class="navbar navbar-expand-lg fixed-top navbar-transparent bg-primary" color-on-scroll="400">
@@ -48,10 +52,10 @@
             <div class="profile-page">
                 <div class="wrapper">
                     <div class="page-header page-header-small">
-                        <div class="page-header-image" style="background-image: url('images/cloudbanner.jpg');"></div>
+                        <div class="page-header-image" style="background-image: url('@bannerURL');"></div>
                         <div class="container">
                             <div class="content-center">
-                                <div class="cc-profile-image"><a href="#"><img src="images/kd.jpg" alt="Image" /></a></div>
+                                <div class="cc-profile-image"><a href="#"><img src="@profileImgURL" alt="Image" /></a></div>
                                 <div class="h2 title">Kuldeep Singh</div>
                                 <p class="category text-white">Architect | Consultant | Data Engineer</p>
                                 <button class="btn btn-primary" style="cursor:pointer;width:200px;" type="submit" onclick="window.open('@Configuration["ResumeURL"]')">

@@ -14,6 +14,7 @@ env:
   AZURE_WEBAPP_PACKAGE_PATH: './published'
   NETCORE_VERSION: '3.1.101'  
   CONTAINER_NAME: 'resumewebsite'
+  ACCOUNT_NAME: 'resumewebsite'
 
 jobs:
   build:
@@ -38,13 +39,20 @@ jobs:
 
     - name: Publish app for deploy
       run: dotnet publish --configuration Release --no-build --output ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
-        
-    - name: Upload to blob storage
+    
+    - name: Upload Resume
       uses: azure/CLI@v1
       with:
         azcliversion: 2.0.72
         inlineScript: |
-          az storage blob upload-batch --destination ${{ env.CONTAINER_NAME }} --account-name 'stkuldeep001' --destination-path 'images/' --source 'images/' --account-key 'Apvvjkhh2F/waw3PuLe+uYEaI5rG8zVsy8f6jEfjpq9hHOEbJ6Y8xhfH+e+MIoDP96aMBBt0QN8LNMcD1KVnWA=='
+          az storage blob upload-batch --destination ${{ env.CONTAINER_NAME }} --account-name ${{ env.ACCOUNT_NAME }} --destination-path 'resume/' --source 'resume/' --account-key ${{ secrets.STORAGE_KEY }}
+
+    - name: Upload Images to blob storage
+      uses: azure/CLI@v1
+      with:
+        azcliversion: 2.0.72
+        inlineScript: |
+          az storage blob upload-batch --destination ${{ env.CONTAINER_NAME }} --account-name ${{ env.ACCOUNT_NAME }} --destination-path 'images/' --source 'images/' --account-key ${{ secrets.STORAGE_KEY }}
         #    az storage blob upload -c ${{ env.CONTAINER_NAME }} -f './published/KuldeepSingh_Resume.pdf' -n 'resume/KuldeepSingh_Resume.pdf' --account-name 'stkd002v2hot' --account-key ${{ secrets.STORAGE_Key }}
 
     - name: 'Deploy to Azure WebApp'

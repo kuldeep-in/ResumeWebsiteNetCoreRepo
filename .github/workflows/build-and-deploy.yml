@@ -44,7 +44,7 @@ jobs:
       with:
         azcliversion: 2.0.72
         inlineScript: |
-          az storage blob upload-batch --destination 'publishtest' --account-name 'stkuldeep001' --destination-path '/images/' --source '.' --account-key 'Apvvjkhh2F/waw3PuLe+uYEaI5rG8zVsy8f6jEfjpq9hHOEbJ6Y8xhfH+e+MIoDP96aMBBt0QN8LNMcD1KVnWA=='
+          az storage blob upload-batch --destination 'publishtest' --account-name 'stkuldeep001' --destination-path './images/' --source '.' --account-key 'Apvvjkhh2F/waw3PuLe+uYEaI5rG8zVsy8f6jEfjpq9hHOEbJ6Y8xhfH+e+MIoDP96aMBBt0QN8LNMcD1KVnWA=='
         #    az storage blob upload -c ${{ env.CONTAINER_NAME }} -f './published/KuldeepSingh_Resume.pdf' -n 'resume/KuldeepSingh_Resume.pdf' --account-name 'stkd002v2hot' --account-key ${{ secrets.STORAGE_Key }}
 
     - name: 'Deploy to Azure WebApp'

@@ -37,17 +37,20 @@
 </head>
 
   <body>
-
+    @{
+        var bannerURL = string.Format("{0}/images/cloudbanner.jpg{1}", Configuration["BlobURL"], Configuration["SASToken"]);
+        var profileImgURL = string.Format("{0}/images/kd.jpg{1}", Configuration["BlobURL"], Configuration["SASToken"]);
+    }
       <div class="page-content">
         <div>
             <div class="profile-page fixed-top" style="height:220px;">
                 <div class="page-header-pp">
-                    <div class="page-header-image" style="background-image: url('images/cloudbanner.jpg');"></div>
+                    <div class="page-header-image" style="background-image: url('@bannerURL');"></div>
                     
                     <div class="container" style="height:220px;">
                         <div class="row">
                             <div class="content-center col-md-3">
-                                <div class="cc-profile-image"><a href="#"><img src="images/kd.jpg" alt="Image" /></a></div>
+                                <div class="cc-profile-image"><a href="#"><img src="@profileImgURL" alt="Image" /></a></div>
                             </div>
                             <div class="content-center col-md-3 d-none d-md-block" style="padding-top:30px;">
                                 <div class="h2">Kuldeep Singh</div>

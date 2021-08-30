@@ -98,7 +98,7 @@
                                     <div class="h4 mt-0 title">About</div>
                                     <p>Hello! I am Kuldeep Singh.</p>
                                     <p>
-                                        I have more than 8 years of experience in consulting, designing, developing and delivering enterprise solutions. I am Microsoft certified Azure Solution Architect, DevOps Engineer, Data Engineer and Azure Developer.
+                                        I have more than 8 years of experience in consulting, designing, developing and delivering enterprise solutions. I am Microsoft certified Azure Solution Architect, DevOps Engineer, Data Engineer and Azure Administrator.
                                         I have a bachelor of engineering in Information Technology degree from University of Pune.
                                     </p>
                                 </div>
@@ -153,7 +153,7 @@
                     <div class="container cc-experience">
                     @foreach(var item in Model.CredlyBadges.OrderByDescending(x=>x.Title))
                     {
-                        <div class="card" style="width:33%">
+                        <div class="card exambadgeCard">
                             <div class="row">
                                 <div class="col-md-5" style="background-color:#cccccc">
                                     <div class="cc-experience-header text-center">
@@ -161,8 +161,8 @@
                                     </div>
                                 </div>
                                 <div class="col-md-7">
-                                    <div class="card-body">
-                                        <div class="h6">@item.Title</div>
+                                    <div class="card-body exambadge">
+                                        <div class="exambadgeTitle">@item.Title</div>
                                         <div class="">@item.SubTitle</div>
                                     </div>
                                 </div>

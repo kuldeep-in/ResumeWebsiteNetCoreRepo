@@ -68,15 +68,17 @@ namespace ResumeWebsite.Pages
                 var item02 = item.Descendants().Where(n => n.HasClass("cr-standard-grid-item-content__subtitle")).FirstOrDefault();
                 var item03 = item.Descendants("img").FirstOrDefault();
                 var item04 = item.Descendants("a").FirstOrDefault();
-
-                CredlyBadges.Add(new BadgesfromCredly
+                if (!item01.InnerText.Contains("(Legacy)"))
                 {
-                    Title = item01.InnerText.Trim(),
-                    SubTitle = item02.InnerText.Trim(),
-                    BadgeURL = string.Format("{1}/images/Badges/{0}.png{2}", item01.InnerText.Trim().Replace(" ", "").Replace(":", ""), BlobURL, SASToken),
-                    BadgeURLFallBack = item03.Attributes["src"].Value,
-                    CertificateURL = string.Format("https://www.credly.com/{0}", item04.Attributes["href"].Value)
-                });
+                    CredlyBadges.Add(new BadgesfromCredly
+                    {
+                        Title = item01.InnerText.Trim(),
+                        SubTitle = item02.InnerText.Trim(),
+                        BadgeURL = string.Format("{1}/images/Badges/{0}.png{2}", item01.InnerText.Trim().Replace(" ", "").Replace(":", ""), BlobURL, SASToken),
+                        BadgeURLFallBack = item03.Attributes["src"].Value,
+                        CertificateURL = string.Format("https://www.credly.com/{0}", item04.Attributes["href"].Value)
+                    });
+                }
             }
 
             Badges = new List<string>
@@ -128,6 +130,7 @@ namespace ResumeWebsite.Pages
                 "Azure DevOps",
                 "Power BI",
                 "Agile / Scrum",
+                "Performance Optimization",
                 "Solution Design"
             };
         }

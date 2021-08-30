@@ -850,6 +850,18 @@ textarea {
     font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
 }
 
+.exambadge {
+}
+
+.exambadgeCard {
+    max-width: 33%;
+}
+
+.exambadgeTitle {
+    font-size: 1em;
+    font-weight: 700;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
 }
@@ -3452,6 +3464,11 @@ Created using IcoMoon - icomoon.io
     }
 
 @media screen and (max-width: 991px) {
+
+    div.exambadgeCard {
+        max-width:49%;
+    }
+
     .sidebar-collapse .navbar-collapse {
         position: fixed;
         display: block;
@@ -4870,6 +4887,15 @@ Created using IcoMoon - icomoon.io
     .landing-page .section-story-overview .image-container:nth-child(2) {
         margin-left: 0;
         margin-bottom: 30px;
+    }
+
+    div.exambadge {
+        display: none;
+    }
+
+    div.exambadgeCard {
+        max-width: 30%;
+        margin:2px;
     }
 }
 

@@ -164,6 +164,11 @@ li {
     width: 95%;
 }
 
+.company-pic {
+    border-radius: 30px;
+    width: 95%;
+}
+
 .badge-pic {
     /*border-radius: 140px;*/
     width: 40%;
@@ -497,11 +502,11 @@ button.mfp-close:hover {
     margin-bottom: 30px;
 }
 
-    .resume-box:last-child {
+    /*.resume-box:last-child {
         margin: 0;
-    }
+    }*/
 
-    .resume-box div:first-child {
+/*    .resume-box div:first-child {
         background: #fff none repeat scroll 0 0;
         border-radius: 50%;
         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
@@ -512,18 +517,18 @@ button.mfp-close:hover {
         line-height: 100px;
         text-align: center;
         width: 100px;
-    }
+    }*/
 
-    .resume-box div:last-child {
+    /*.resume-box div:last-child {
         padding-left: 130px;
-    }
+    }*/
 
-    .resume-box span {
+   /* .resume-box span {
         color: #a0a0a0;
         display: block;
         font-weight: 500;
         padding-bottom: 5px;
-    }
+    }*/
 
 .blog-background {
     padding: 100px 0 0;

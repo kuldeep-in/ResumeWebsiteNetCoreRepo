@@ -159,7 +159,7 @@
                                 @foreach(var item in Model.CredlyBadges.OrderByDescending(x=>x.Title))
                                 {
                                     <div class="card">
-                                      <img class="card-img-top" width="80%" src="@item.BadgeURL" alt="@item.Title" onerror="this.src='@item.BadgeURLFallBack'">
+                                      <img class="badge-img" src="@item.BadgeURL" alt="@item.Title" onerror="this.src='@item.BadgeURLFallBack'">
                                       <div class="card-body">
                                         <p class="card-text">@item.Title</p>
                                       </div>
@@ -320,7 +320,7 @@
         </section>
         <!-- end Blog section -->
 
-        <section id="certifications">
+        <section id="certifications01">
             <div class="about-background">
                 <div class="container">
                     <div class="row">

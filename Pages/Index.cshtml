@@ -79,19 +79,19 @@
                             </div>
                             <ul class="nav">
                                 <li class="active">
-                                    <a href="#about">About me</a>
+                                    <a href="#about"><i class="fa fa-user-circle-o fa-2x"></i></a>
                                 </li>
                                 <li>
-                                    <a href="#skills">Skills</a>
+                                    <a href="#skills"><i class="fa fa-code fa-2x"></i></a>
                                 </li>
                                 <li>
-                                    <a href="#certifications">Certifications</a>
+                                    <a href="#certifications"><i class="fa fa-certificate fa-2x"></i></a>
                                 </li>
                                 <li>
-                                    <a href="#experience">Experience</a>
+                                    <a href="#experience"><i class="fa fa-briefcase fa-2x"></i></a>
                                 </li>
                                 <li>
-                                    <a href="#education">Education</a>
+                                    <a href="#education"><i class="fa fa-university fa-2x"></i></a>
                                 </li>
                             </ul>
                         </div><!-- end Menu -->
@@ -112,7 +112,7 @@
                                 <h2>About me</h2>
 							</div><!-- end Section Title -->
 							<h1>Hello, I am <strong>Kuldeep Singh</strong> <br>Architect | Consultant | Data Engineer</h1>
-							<p>
+							<p class="content-box">
                                 I have more than 8 years of experience in consulting, designing, developing and delivering enterprise solutions. I am Microsoft certified Azure Solution Architect, DevOps Engineer, Data Engineer and Azure Administrator.
                                 I have a bachelor of engineering in Information Technology degree from University of Pune.          
                             </p>
@@ -131,9 +131,9 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-9 col-sm-offset-3 aboutWrapper">
                             <div class="section-title">
-                                <h2>Skills</h2>
+                                <h2><i class="fa fa-code fa-2x"></i> Skills</h2>
 							</div><!-- end Section Title -->
-							<div class="row">
+							<div class="content-box text-center">
                                 @foreach(var item in Model.Technologies)
                                 {
                                     <label class="skill-label"> @item</label>
@@ -153,9 +153,9 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-9 col-sm-offset-3 aboutWrapper">
                             <div class="section-title">
-                                <h2>Cetrifications</h2>
-							</div><!-- end Section Title -->
-                            <div class="text-center">
+                                <h2><i class="fa fa-certificate fa-2x"></i> Cetrifications</h2>
+							</div>
+                            <div class="content-box text-center">
                                 @foreach(var item in Model.CredlyBadges.OrderByDescending(x=>x.Title))
                                 {
                                     <div class="card">
@@ -180,9 +180,9 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-9 col-sm-offset-3 resumeWrapper">
                             <div class="section-title">
-                                <h2>Work Experience</h2>
+                                <h2><i class="fa fa-briefcase fa-2x"></i> Work Experience</h2>
                             </div>
-                            
+                            <div class="content-box">
                             <div class="resume-box"> 
                                 <div class="row">
                                     <div class="col-xs-4 col-sm-3 col-md-2">
@@ -280,7 +280,7 @@
                                     </p>
                                 </div>
                             </div>
-
+                            </div>
                         </div>
                     </div><!-- end row -->
                 </div><!-- end container -->
@@ -290,30 +290,32 @@
 
         <!-- Blog section -->
         <section id="education">
-            <div class="blog-background">
+            <div class="resume-background">
                 <div class="container">
                     <div class="row">
-                        <div class="col-xs-12 col-sm-9 col-sm-offset-3 blogWrapper">
-                            <!-- Section Title -->
+                        <div class="col-xs-12 col-sm-9 col-sm-offset-3 resumeWrapper">
                             <div class="section-title">
-                                <h2>Education</h2>
-                            </div><!-- end Section Title -->
-                            <!-- Blog Post 1 -->
-                            <div class="resume-box">
-                                <div>
-                                    <i class="icon_contacts_alt"></i>
-                                </div>
-                                <div>
-                                    <h5>University of Pune - Bachelor's Degree</h5>
-                                    <span>2008 – 2012</span>
-                                    <p> Bachelor of Engineering in Information Technology
-                                    </p>
+                                <h2><i class="fa fa-university fa-2x"></i> Education</h2>
+                            </div>
+                            <div class="content-box">
+
+                            <div class="resume-box"> 
+                                <div class="row">
+                                    <div class="col-xs-4 col-sm-3 col-md-2">
+                                        <img class="company-pic" src="/unipune.png" alt="">
+                                    </div>
+                                    <div class="col-xs-8 col-sm-9 col-md-10">
+                                        <h5>University of Pune - Bachelor's Degree</h5>
+                                        <span>2008 – 2012</span>
+                                        <p> Bachelor of Engineering in Information Technology
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
-                            <!-- end Blog Post 3 -->
+                            </div>
                         </div>
-                    </div><!-- end row -->
-                </div><!-- end container -->
+                    </div>
+                </div>
             </div>
         </section>
         <!-- end Blog section -->

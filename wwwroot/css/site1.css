@@ -1,8 +1,12 @@
 ﻿:root {
-    --bgColor1: #000000;
-    --bgColor2: #242323;
+    --bgColor1: #121212;
+    --bgColor2: #242526;
+    --bgColor3: #3A3B3C;
+    --bgColor3: #424242;
     --fontColor1: #ffffff;
-    --fontColor2: #666565;
+    --fontColor2: #BFBFBF;
+    --fontColor3: #919191;
+    --pColor1: #3700B3;
 }
 
 h1, h2 {
@@ -156,6 +160,7 @@ li {
 .sidebarWrapper {
     box-shadow: 0 3px 10px 3px rgba(0, 0, 0, 0.3);
     color: #fff;
+    background: var(--bgColor2);
     padding: 27px 0 0;
 }
 
@@ -176,7 +181,7 @@ li {
 
 .sidebar .nav {
     padding: 20px 30px;
-    /* background: #fff none repeat scroll 0 0; */
+     /*background: var(--bgColor2) none repeat scroll 0 0;*/ 
     padding: 20px 30px;
 }
 
@@ -254,7 +259,7 @@ li {
 
     .sidebar .nav li a {
         background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-        color: var(--fontColor2);
+        color: var(--fontColor3);
         display: inline-block;
         padding: 0;
         transition: all 0.1s linear 0s;
@@ -496,10 +501,12 @@ button.mfp-close:hover {
 
 .resumeWrapper {
     padding: 0;
+    margin-left:22%;
 }
 
 .resume-box {
     margin-bottom: 30px;
+    background-color:var(--bgColor3);
 }
 
     /*.resume-box:last-child {
@@ -531,7 +538,7 @@ button.mfp-close:hover {
     }*/
 
 .blog-background {
-    padding: 100px 0 0;
+    padding: 50px 0 0;
 }
 
 .blogWrapper {
@@ -856,7 +863,9 @@ textarea {
     }
 
 .fixed-right-socials {
-    bottom: 0;
+    /*bottom: 30%;*/
+    padding:10px;
+    background: var(--bgColor2);
     position: fixed;
     right: 3px;
     top: 13%;
@@ -939,6 +948,12 @@ textarea:focus, textarea.form-control:focus, input.form-control:focus, input[typ
 /*
 -------------------------*/
 
+.content-box {
+    background: var(--bgColor2);
+    padding: 20px;
+    border-radius: 15px;
+}
+
 .skill-label {
     border: 0;
     padding:10px;
@@ -949,7 +964,7 @@ textarea:focus, textarea.form-control:focus, input.form-control:focus, input[typ
     margin-bottom: 7px;
     margin-right:4px;
     box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
-    background-color:cornflowerblue;
+    background-color:var(--bgColor3);
 }
 
 .card-cert {
@@ -970,12 +985,14 @@ textarea:focus, textarea.form-control:focus, input.form-control:focus, input[typ
 
 .card {
     border: 0;
-    border-radius: 0.1875rem;
+    background-color: var(--bgColor3);
+    border-radius: 10px;
     display: inline-block;
     position: relative;
     overflow: hidden;
     width: 18rem;
     margin-bottom: 25px;
+    margin-right:5px;
     box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
 }
 

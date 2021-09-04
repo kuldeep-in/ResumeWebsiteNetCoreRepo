@@ -92,6 +92,10 @@
         font-size: 1.2em;
     }
 
+    .section-title h2 {
+        font-size: 2.4em;
+    }
+
     .mainContentWrapper {
         padding: 0;
         margin-left: 0;
@@ -104,7 +108,7 @@
 
     .user-pic {
         border-radius: 230px;
-        width: 95%;
+        width: 85%;
     }
 
     .fixed-left-contact, .fixed-right-socials, .right-br, .left-br {

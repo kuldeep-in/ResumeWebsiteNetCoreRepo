@@ -421,6 +421,7 @@ li {
 .imageHover span, .resume-box span {
     font-style: italic;
     padding-left: 0 !important;
+    padding-bottom:5px;
 }
 
 .resume-box p{

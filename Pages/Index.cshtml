@@ -175,7 +175,7 @@
 
         <!-- Resume section -->
         <section id="experience">
-            <div class="resume-background">
+            <div class="mainContentBackground">
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 col-sm-9 col-sm-offset-3 mainContentWrapper">
@@ -290,7 +290,7 @@
 
         <!-- Blog section -->
         <section id="education">
-            <div class="resume-background">
+            <div class="mainContentBackground">
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 col-sm-9 col-sm-offset-3 mainContentWrapper">
@@ -298,20 +298,19 @@
                                 <h2><i class="fa fa-university"></i> Education</h2>
                             </div>
                             <div class="content-box">
-
-                            <div class="resume-box"> 
-                                <div class="row">
-                                    <div class="col-xs-4 col-sm-3 col-md-2">
-                                        <img class="company-pic" src="/unipune.png" alt="">
-                                    </div>
-                                    <div class="col-xs-8 col-sm-9 col-md-10">
-                                        <h5>University of Pune - Bachelor's Degree</h5>
-                                        <span>2008 – 2012</span>
-                                        <p> Bachelor of Engineering in Information Technology
-                                        </p>
+                                <div class="resume-box"> 
+                                    <div class="row">
+                                        <div class="col-xs-4 col-sm-3 col-md-2">
+                                            <img class="company-pic" src="/unipune.png" alt="">
+                                        </div>
+                                        <div class="col-xs-8 col-sm-9 col-md-10">
+                                            <h5>University of Pune - Bachelor's Degree</h5>
+                                            <span>2008 – 2012</span>
+                                            <p> Bachelor of Engineering in Information Technology
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
                             </div>
                         </div>
                     </div>
@@ -321,20 +320,22 @@
         <!-- end Blog section -->
 
         <section id="certifications01">
-            <div class="about-background">
+            <div class="mainContentBackground">
                 <div class="container">
                     <div class="row">
-                        <div class="col-xs-12 col-sm-9 col-sm-offset-3 aboutWrapper">
+                        <div class="col-xs-12 col-sm-9 col-sm-offset-3 mainContentWrapper">
                             <div class="section-title">
                                 <h2>Cetrifications</h2>
 							</div><!-- end Section Title -->
-                            <div class="text-center">
-                                @foreach(var item in Model.Certificates)
-                                {
-                                    <div class="card-cert">
-                                      <img class="card-img-top" width="98%" src="@item" alt="">
-                                    </div>
-                                } 
+                            <div class="content-box">
+                                <div class="text-center">
+                                    @foreach(var item in Model.Certificates)
+                                    {
+                                        <div class="card-cert">
+                                          <img class="cert-img" src="@item" alt="">
+                                        </div>
+                                    } 
+                                </div>
                             </div>
                         </div>
                     </div><!-- end row -->

@@ -173,6 +173,11 @@ li {
     padding:5px;
 }
 
+.cert-img {
+    width: 90%;
+    padding: 5px;
+}
+
 .user-pic {
     border-radius: 140px;
     width: 95%;
@@ -180,7 +185,8 @@ li {
 
 .company-pic {
     border-radius: 30px;
-    width: 95%;
+    width: 100px;
+    padding:5px;
 }
 
 .badge-pic {
@@ -511,6 +517,10 @@ button.mfp-close:hover {
 .mainContentWrapper {
     padding: 0;
     margin-left: 22%;
+}
+
+.mainContentBackground {
+    padding: 30px 0 0;
 }
 
 .resumeWrapper {
@@ -984,12 +994,14 @@ textarea:focus, textarea.form-control:focus, input.form-control:focus, input[typ
 
 .card-cert {
     border: 0;
-    border-radius: 0.1875rem;
+    background-color: var(--bgColor3);
+    border-radius: 10px;
     display: inline-block;
     position: relative;
     overflow: hidden;
-    width: 23%;
+    width: 48%;
     margin-bottom: 25px;
+    margin-right: 5px;
     box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
 }
 

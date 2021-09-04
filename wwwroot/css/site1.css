@@ -860,7 +860,7 @@ textarea {
 
 
 .top-br, .left-br, .bottom-br, .right-br {
-    background: #000000 none repeat scroll 0 0;
+    background: var(--bgColor1) none repeat scroll 0 0;
     position: fixed;
     z-index: 9;
 }
@@ -948,11 +948,11 @@ textarea {
 }
 
 .list-unstiled .fa-github {
-    background: #323232 none repeat scroll 0 0;
+    background: #444444 none repeat scroll 0 0;
 }
 
 .list-unstiled .fa-twitter {
-    background: #3abdd1 none repeat scroll 0 0;
+    background: #3698A2 none repeat scroll 0 0;
 }
 
 .list-unstiled .fa-linkedin {
@@ -960,7 +960,7 @@ textarea {
 }
 
 .list-unstiled .fa-instagram {
-    background: #097fc3 none repeat scroll 0 0;
+    background: #d234b0 none repeat scroll 0 0;
 }
 
 .list-unstiled .fa-skype {
@@ -968,11 +968,11 @@ textarea {
 }
 
 .list-unstiled .fa-envelope-o {
-    background: #006ffb none repeat scroll 0 0;
+    background: #254888 none repeat scroll 0 0;
 }
 
 .list-unstiled .fa-user-circle-o {
-    background: #3abdd1 none repeat scroll 0 0;
+    background: #444444 none repeat scroll 0 0;
 }
 
 textarea:focus, textarea.form-control:focus, input.form-control:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="number"]:focus, .form-control[type="text"]:focus, .form-control[type="password"]:focus, .form-control[type="email"]:focus, .form-control[type="tel"]:focus, .form-control[contenteditable]:focus {

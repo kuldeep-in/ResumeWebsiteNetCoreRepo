@@ -4,6 +4,11 @@
         position: fixed;
     }
 
+    .mainContentWrapper {
+        padding: 0;
+        margin-left: 24%;
+    }
+
     .toggle-btn {
         position: absolute;
         visibility: hidden;
@@ -61,9 +66,25 @@
     }
 }
 
+@media screen and (max-width: 991px) {
+    body {
+        /*background-color: #fff;*/
+    }
+
+    .mainContentWrapper {
+        padding: 0;
+        margin-left: 24%;
+    }
+}
+
 @media only screen and (max-width: 767px) {
     body {
         /*background-color: #fff;*/
+    }
+
+    .mainContentWrapper {
+        padding: 0;
+        margin-left: 0;
     }
 
     .resumeWrapper {

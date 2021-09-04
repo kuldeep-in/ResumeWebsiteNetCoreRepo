@@ -169,7 +169,7 @@ li {
 }
 
 .badge-img {
-    width:90%;
+    width:95%;
     padding:5px;
 }
 
@@ -420,6 +420,13 @@ li {
 
 .imageHover span, .resume-box span {
     font-style: italic;
+    padding-left: 0 !important;
+}
+
+.resume-box p{
+    padding-bottom:15px;
+    padding-top:8px;
+    line-height:1.6em;
 }
 
 .portfolio-filter ul li:hover {
@@ -516,7 +523,7 @@ button.mfp-close:hover {
 
 .mainContentWrapper {
     padding: 0;
-    margin-left: 22%;
+    margin-left: 27%;
 }
 
 .mainContentBackground {
@@ -992,7 +999,7 @@ textarea:focus, textarea.form-control:focus, input.form-control:focus, input[typ
     background-color:var(--bgColor3);
 }
 
-.card-cert {
+.certCard {
     border: 0;
     background-color: var(--bgColor3);
     border-radius: 10px;
@@ -1005,12 +1012,18 @@ textarea:focus, textarea.form-control:focus, input.form-control:focus, input[typ
     box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
 }
 
-    .card-cert .card-body {
+    .certCard .card-body {
         min-height: 75px;
         margin-top: 5px;
     }
 
-.card {
+.badgeTitle {
+    overflow: hidden;
+    line-height: 1.4em;
+    max-height: 2.8em;
+}
+
+.badgeCard {
     border: 0;
     background-color: var(--bgColor3);
     border-radius: 10px;
@@ -1019,35 +1032,36 @@ textarea:focus, textarea.form-control:focus, input.form-control:focus, input[typ
     overflow: hidden;
     width: 18rem;
     margin-bottom: 25px;
-    margin-right:5px;
+    margin-right: 5px;
     box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
 }
 
-    .card .card-body {
-        min-height: 75px;
+    .badgeCard .card-body {
+        min-height: 2.8em;
         margin-top:5px;
+        margin-bottom:15px;
     }
 
-    .card .card-body-pp {
+    .badgeCard .card-body-pp {
         min-height: 50px;
     }
 
-    .card[data-background-color="orange"] {
+    .badgeCard[data-background-color="orange"] {
         background-color: #378C3F;
     }
 
-    .card[data-background-color="red"] {
+    .badgeCard[data-background-color="red"] {
         background-color: #FF3636;
     }
 
-    .card[data-background-color="yellow"] {
+    .badgeCard[data-background-color="yellow"] {
         background-color: #FFB236;
     }
 
-    .card[data-background-color="blue"] {
+    .badgeCard[data-background-color="blue"] {
         background-color: #2CA8FF;
     }
 
-    .card[data-background-color="green"] {
+    .badgeCard[data-background-color="green"] {
         background-color: #18ce0f;
     }

@@ -4,11 +4,6 @@
         position: fixed;
     }
 
-    .mainContentWrapper {
-        padding: 0;
-        margin-left: 24%;
-    }
-
     .toggle-btn {
         position: absolute;
         visibility: hidden;
@@ -66,6 +61,17 @@
     }
 }
 
+@media screen and (max-width: 1300px) {
+    body {
+        /*background-color: #fff;*/
+    }
+
+    .mainContentWrapper {
+        padding: 0;
+        margin-left: 24%;
+    }
+}
+
 @media screen and (max-width: 991px) {
     body {
         /*background-color: #fff;*/
@@ -77,9 +83,13 @@
     }
 }
 
-@media only screen and (max-width: 767px) {
+@media screen and (max-width: 767px) {
     body {
         /*background-color: #fff;*/
+    }
+
+    .section-title h2 i {
+        font-size: 1.2em;
     }
 
     .mainContentWrapper {
@@ -204,7 +214,7 @@
         border-radius: 6px;
     }
 
-    .card {
+    .badgeCard {
         border: 0;
         border-radius: 5px;
         display: inline-block;
@@ -215,7 +225,7 @@
         box-shadow: 0px 5px 25px 0px rgba(0, 0, 0, 0.2);
     }
 
-    .card-cert {
+    .certCard {
         border: 0;
         border-radius: 5px;
         display: inline-block;

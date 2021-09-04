@@ -73,6 +73,9 @@
 							<img class="img-responsive" alt="signature" src="images/signature.png">
 						</div>*@
                         <!-- Menu -->
+                        <button class="btn downloadResume" type="submit" onclick="window.open('@resumeURL')">
+                            <i class="fa fa-download"></i> Download CV
+                        </button>
                         <div class="menu">
                             <div class="toggle-btn">
                                 <span class="lines"></span>
@@ -153,7 +156,7 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-9 mainContentWrapper">
                             <div class="section-title">
-                                <h2><i class="fa fa-certificate"></i> Cetrifications</h2>
+                                <h2><i class="fa fa-certificate"></i> Certifications</h2>
 							</div>
                             <div class="content-box text-center">
                                 @foreach(var item in Model.CredlyBadges.OrderByDescending(x=>x.Title))
@@ -319,13 +322,13 @@
         </section>
         <!-- end Blog section -->
 
-        <section id="certifications01">
+        <section id="certificates">
             <div class="mainContentBackground">
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 col-sm-9 col-sm-offset-3 mainContentWrapper">
                             <div class="section-title">
-                                <h2>Cetrifications</h2>
+                                <h2>Cetrificates</h2>
 							</div><!-- end Section Title -->
                             <div class="content-box">
                                 <div class="text-center">

@@ -32,7 +32,7 @@ a {
 
 .btn {
     border-radius: 50px;
-    font-family: Titillium Web;
+    /*font-family: Titillium Web;*/
 }
 
 .widget {
@@ -180,7 +180,8 @@ li {
 
 .user-pic {
     border-radius: 140px;
-    width: 95%;
+    width: 85%;
+    margin-bottom:15px;
 }
 
 .company-pic {
@@ -283,6 +284,9 @@ li {
         .sidebar .nav li a:hover, .sidebar .nav li.active a {
             color: var(--fontColor1);
             opacity: unset;
+            background: var(--bgColor3);
+            padding: 15px;
+            border-radius:10px;
         }
 
 .about-background {
@@ -948,7 +952,7 @@ textarea {
 }
 
 .list-unstiled .fa-github {
-    background: #444444 none repeat scroll 0 0;
+    background: var(--bgColor3) none repeat scroll 0 0;
 }
 
 .list-unstiled .fa-twitter {
@@ -968,11 +972,11 @@ textarea {
 }
 
 .list-unstiled .fa-envelope-o {
-    background: #254888 none repeat scroll 0 0;
+    background: var(--pColor1) none repeat scroll 0 0;
 }
 
 .list-unstiled .fa-user-circle-o {
-    background: #444444 none repeat scroll 0 0;
+    background: var(--bgColor3) none repeat scroll 0 0;
 }
 
 textarea:focus, textarea.form-control:focus, input.form-control:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, input[type="number"]:focus, .form-control[type="text"]:focus, .form-control[type="password"]:focus, .form-control[type="email"]:focus, .form-control[type="tel"]:focus, .form-control[contenteditable]:focus {
@@ -980,6 +984,22 @@ textarea:focus, textarea.form-control:focus, input.form-control:focus, input[typ
 }
 /*
 -------------------------*/
+
+.downloadResume {
+    cursor: pointer;
+    width: 200px;
+    background:var(--pColor1);
+    font-size:1.2em;
+    padding: 6px 6px;
+}
+
+    .downloadResume:focus {
+        color:var(--fontColor1);
+    }
+
+    .downloadResume:hover {
+        color:var(--fontColor3);
+    }
 
 .content-box {
     background: var(--bgColor2);

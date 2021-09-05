@@ -1,4 +1,9 @@
-﻿:root {
+﻿@font-face {
+    font-family: "MyFont01";
+    src: url("/MyriadRegular.ttf") format("truetype");
+}
+
+:root {
     --bgColor1: #121212;
     --bgColor2: #242526;
     --bgColor3: #3A3B3C;
@@ -7,6 +12,7 @@
     --fontColor2: #BFBFBF;
     --fontColor3: #919191;
     --pColor1: #3700B3;
+    --font01: "MyFont01";
 }
 
 h1, h2 {
@@ -86,11 +92,11 @@ body {
 
 h1, h2, h3, h4, h5 {
     color: var(--fontColor1);
-    font-family: 'Titillium Web', sans-serif;
+    font-family: var(--font01), 'Titillium Web', sans-serif;
 }
 
 h1 {
-    font: 900 24px/36px "Titillium Web",serif;
+    font: 900 24px/36px var(--font01),"Titillium Web",serif;
     margin: 0 0 15px;
 }
 
@@ -147,7 +153,7 @@ li {
 
     .section-title span {
         color: #969696;
-        font: 500 14px open sans,sans-serif;
+        font: 500 14px "MyFont01", open sans,sans-serif;
         padding-right: 10px;
     }
 

@@ -59,6 +59,14 @@
         margin-left: 35%;
         width: 65%;
     }
+
+    .downloadResume {
+        cursor: pointer;
+        /*width: 200px;*/
+        background: var(--pColor1);
+        font-size: .8em;
+        padding: 6px 8px;
+    }
 }
 
 @media screen and (max-width: 1300px) {

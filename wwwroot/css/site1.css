@@ -12,7 +12,6 @@
     --fontColor2: #BFBFBF;
     --fontColor3: #919191;
     --pColor1: #3700B3;
-    --font01: "MyFont01";
 }
 
 h1, h2 {
@@ -85,18 +84,18 @@ a {
 body {
     background-color: var(--bgColor1);
     color: var(--fontColor1);
-    font: 300 14px open Calibri,sans,sans-serif;
+    font: 300 14px "MyFont01",open Calibri,sans,sans-serif;
     letter-spacing: 0.5px;
     overflow-x: hidden;
 }
 
 h1, h2, h3, h4, h5 {
     color: var(--fontColor1);
-    font-family: var(--font01), 'Titillium Web', sans-serif;
+    font-family: "MyFont01", 'Titillium Web', sans-serif;
 }
 
 h1 {
-    font: 900 24px/36px var(--font01),"Titillium Web",serif;
+    font: 900 24px/36px "MyFont01","Titillium Web",serif;
     margin: 0 0 15px;
 }
 
@@ -993,10 +992,10 @@ textarea:focus, textarea.form-control:focus, input.form-control:focus, input[typ
 
 .downloadResume {
     cursor: pointer;
-    width: 200px;
+    /*width: 200px;*/
     background:var(--pColor1);
-    font-size:1.2em;
-    padding: 6px 6px;
+    font-size:1em;
+    padding: 6px 10px;
 }
 
     .downloadResume:focus {

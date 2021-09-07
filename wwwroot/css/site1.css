@@ -36,7 +36,7 @@ a {
 }
 
 .btn {
-    border-radius: 50px;
+    border-radius: .8em;
     /*font-family: Titillium Web;*/
 }
 
@@ -84,7 +84,7 @@ a {
 body {
     background-color: var(--bgColor1);
     color: var(--fontColor1);
-    font: 300 14px "MyFont01",open Calibri,sans,sans-serif;
+    font: 300 16px "MyFont01",open Calibri,sans,sans-serif;
     letter-spacing: 0.5px;
     overflow-x: hidden;
 }
@@ -100,11 +100,11 @@ h1 {
 }
 
 h2 {
-    font: 200 38px "Titillium Web",serif;
+    font: 200 38px "MyFont01","Titillium Web",serif;
 }
 
 h3 {
-    font: 900 16px "Titillium Web",serif;
+    font: 900 16px "MyFont01","Titillium Web",serif;
     letter-spacing: 1.5px;
 }
 
@@ -114,7 +114,7 @@ h3 {
 }
 
 h4 {
-    font: 900 13px "Titillium Web",serif;
+    font: 900 13px "MyFont01","Titillium Web",serif;
 }
 
 p {
@@ -995,7 +995,7 @@ textarea:focus, textarea.form-control:focus, input.form-control:focus, input[typ
     /*width: 200px;*/
     background:var(--pColor1);
     font-size:1em;
-    padding: 6px 10px;
+    padding: 6px 16px;
 }
 
     .downloadResume:focus {
@@ -1015,7 +1015,7 @@ textarea:focus, textarea.form-control:focus, input.form-control:focus, input[typ
 .skill-label {
     border: 0;
     padding:10px;
-    border-radius: 1rem;
+    border-radius: .8rem;
     display: inline-block;
     position: relative;
     overflow: hidden;

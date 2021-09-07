@@ -1,3 +1,9 @@
+/*X-Small None <576px
+Small sm ?576px
+Medium md ?768px
+Large lg ?992px
+Extra large xl ?1200px
+Extra extra large xxl ?1400px*/
 
 @media only screen and (min-width: 768px) {
     .sidebarWrapper {
@@ -47,10 +53,34 @@
     }
 }
 
+@media only screen and (min-width: 1200px) {
+    body {
+        /*background-color: #fff;*/
+    }
+
+    .container {
+        width: 1070px;
+    }
+
+    .mainContentWrapper {
+        padding: 0;
+        margin-left: 28%;
+    }
+}
+
 @media only screen and (min-width: 1600px) {
     .aboutWrapper, .blogWrapper, .contactWrapper, .footer-background, .portfolioWrapper, .resumeWrapper, .servicesWrapper, .testimonialWrapper {
         margin-left: 30%;
         width: 70%;
+    }
+
+    .mainContentWrapper {
+        padding: 0;
+        margin-left: 26%;
+    }
+
+    .container {
+        width: 1270px;
     }
 }
 
@@ -60,19 +90,33 @@
         width: 65%;
     }
 
-    .downloadResume {
-        cursor: pointer;
-        /*width: 200px;*/
-        background: var(--pColor1);
+    .mainContentWrapper {
+        padding: 0;
+        margin-left: 28%;
+    }
+
+    .container {
+        width: 1570px;
+    }
+
+    /*.downloadResume {
+        cursor: pointer;*/
+    /*width: 200px;*/
+    /*background: var(--pColor1);
         font-size: .8em;
         padding: 6px 8px;
-    }
+    }*/
 }
 
-@media screen and (max-width: 1300px) {
+
+@media screen and (max-width: 1199px) {
     body {
         /*background-color: #fff;*/
     }
+
+    /*.container {
+        width:970px;
+    }*/
 
     .mainContentWrapper {
         padding: 0;
@@ -85,15 +129,31 @@
         /*background-color: #fff;*/
     }
 
+    .downloadResume {
+        cursor: pointer;
+        /*width: 200px;*/
+        background: var(--pColor1);
+        font-size: .8em;
+        padding: 6px 8px;
+    }
+
     .mainContentWrapper {
         padding: 0;
-        margin-left: 24%;
+        margin-left: 23%;
     }
 }
 
 @media screen and (max-width: 767px) {
     body {
         /*background-color: #fff;*/
+    }
+
+    .downloadResume {
+        cursor: pointer;
+        /*width: 200px;*/
+        background: var(--pColor1);
+        font-size: 1em;
+        padding: 6px 32px;
     }
 
     .section-title h2 i {

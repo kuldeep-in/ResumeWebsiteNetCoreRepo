@@ -124,6 +124,8 @@ namespace ResumeWebsite.Pages
                 "Azure Storage",
                 "Azure Data Factory",
                 "Azure Synapse",
+                "Azure Databrick",
+                "Data Warehouse",
                 "Eventing and Messeging",
                 "Application Monitoring",
                 "Azure Automation",

@@ -1,7 +1,7 @@
 ﻿@page
 @using Microsoft.Extensions.Configuration
 @inject IConfiguration Configuration
-@model ResumeWebsite.Pages.PersonalProfileModel
+@model ResumeWebsite.Pages.PersonalProfile1Model
 @{
 }
 
@@ -20,8 +20,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="~/css/site.css" rel="stylesheet">
-
-    <script src="~/js/jquery.min.js" asp-append-version="true"></script>
     @*<script src="~/js/site.js" asp-append-version="true"></script>*@
     <script type="text/javascript">
         !function(T,l,y){var S=T.location,k="script",D="instrumentationKey",C="ingestionendpoint",I="disableExceptionTracking",E="ai.device.",b="toLowerCase",w="crossOrigin",N="POST",e="appInsightsSDK",t=y.name||"appInsights";(y.name||T[e])&&(T[e]=t);var n=T[t]||function(d){var g=!1,f=!1,m={initialize:!0,queue:[],sv:"5",version:2,config:d};function v(e,t){var n={},a="Browser";return n[E+"id"]=a[b](),n[E+"type"]=a,n["ai.operation.name"]=S&&S.pathname||"_unknown_",n["ai.internal.sdkVersion"]="javascript:snippet_"+(m.sv||m.version),{time:function(){var e=new Date;function t(e){var t=""+e;return 1===t.length&&(t="0"+t),t}return e.getUTCFullYear()+"-"+t(1+e.getUTCMonth())+"-"+t(e.getUTCDate())+"T"+t(e.getUTCHours())+":"+t(e.getUTCMinutes())+":"+t(e.getUTCSeconds())+"."+((e.getUTCMilliseconds()/1e3).toFixed(3)+"").slice(2,5)+"Z"}(),iKey:e,name:"Microsoft.ApplicationInsights."+e.replace(/-/g,"")+"."+t,sampleRate:100,tags:n,data:{baseData:{ver:2}}}}var h=d.url||y.src;if(h){function a(e){var t,n,a,i,r,o,s,c,u,p,l;g=!0,m.queue=[],f||(f=!0,t=h,s=function(){var e={},t=d.connectionString;if(t)for(var n=t.split(";"),a=0;a<n.length;a++){var i=n[a].split("=");2===i.length&&(e[i[0][b]()]=i[1])}if(!e[C]){var r=e.endpointsuffix,o=r?e.location:null;e[C]="https://"+(o?o+".":"")+"dc."+(r||"services.visualstudio.com")}return e}(),c=s[D]||d[D]||"",u=s[C],p=u?u+"/v2/track":d.endpointUrl,(l=[]).push((n="SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details)",a=t,i=p,(o=(r=v(c,"Exception")).data).baseType="ExceptionData",o.baseData.exceptions=[{typeName:"SDKLoadFailed",message:n.replace(/\./g,"-"),hasFullStack:!1,stack:n+"\nSnippet failed to load ["+a+"] -- Telemetry is disabled\nHelp Link: https://go.microsoft.com/fwlink/?linkid=2128109\nHost: "+(S&&S.pathname||"_unknown_")+"\nEndpoint: "+i,parsedStack:[]}],r)),l.push(function(e,t,n,a){var i=v(c,"Message"),r=i.data;r.baseType="MessageData";var o=r.baseData;return o.message='AI (Internal): 99 message:"'+("SDK LOAD Failure: Failed to load Application Insights SDK script (See stack for details) ("+n+")").replace(/\"/g,"")+'"',o.properties={endpoint:a},i}(0,0,t,p)),function(e,t){if(JSON){var n=T.fetch;if(n&&!y.useXhr)n(t,{method:N,body:JSON.stringify(e),mode:"cors"});else if(XMLHttpRequest){var a=new XMLHttpRequest;a.open(N,t),a.setRequestHeader("Content-type","application/json"),a.send(JSON.stringify(e))}}}(l,p))}function i(e,t){f||setTimeout(function(){!t&&m.core||a()},500)}var e=function(){var n=l.createElement(k);n.src=h;var e=y[w];return!e&&""!==e||"undefined"==n[w]||(n[w]=e),n.onload=i,n.onerror=a,n.onreadystatechange=function(e,t){"loaded"!==n.readyState&&"complete"!==n.readyState||i(0,t)},n}();y.ld<0?l.getElementsByTagName("head")[0].appendChild(e):setTimeout(function(){l.getElementsByTagName(k)[0].parentNode.appendChild(e)},y.ld||0)}try{m.cookie=l.cookie}catch(p){}function t(e){for(;e.length;)!function(t){m[t]=function(){var e=arguments;g||m.queue.push(function(){m[t].apply(m,e)})}}(e.pop())}var n="track",r="TrackPage",o="TrackEvent";t([n+"Event",n+"PageView",n+"Exception",n+"Trace",n+"DependencyData",n+"Metric",n+"PageViewPerformance","start"+r,"stop"+r,"start"+o,"stop"+o,"addTelemetryInitializer","setAuthenticatedUserContext","clearAuthenticatedUserContext","flush"]),m.SeverityLevel={Verbose:0,Information:1,Warning:2,Error:3,Critical:4};var s=(d.extensionConfig||{}).ApplicationInsightsAnalytics||{};if(!0!==d[I]&&!0!==s[I]){var c="onerror";t(["_"+c]);var u=T[c];T[c]=function(e,t,n,a,i){var r=u&&u(e,t,n,a,i);return!0!==r&&m["_"+c]({message:e,url:t,lineNumber:n,columnNumber:a,error:i}),r},d.autoExceptionInstrumented=!0}return m}(y.cfg);function a(){y.onInit&&y.onInit(n)}(T[t]=n).queue&&0===n.queue.length?(n.queue.push(a),n.trackPageView({})):a()}(window,document,{
@@ -36,7 +34,6 @@
             /* ...Other Configuration Options... */
         }});
      </script>
-     @*<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>*@
 </head>
 
   <body>
@@ -58,19 +55,21 @@
                             <div class="content-center col-md-3 d-none d-md-block" style="padding-top:30px;">
                                 <div class="h2">Kuldeep Singh</div>
                             </div>
-                            @*<div class="col-md-2 d-none d-md-block">
+                            <div class="col-md-2 d-none d-md-block">
                                 <button class="tablink" onclick="openTab('tabTL', this, '#236bff')">Timeline</button>
                                 <button class="tablink" onclick="openTab('tabM', this, '#236bff')">Marathon</button>
                             </div>
                             <div class="col-md-2 d-none d-md-block">
                                 <button class="tablink" onclick="openTab('tabIN', this, '#236bff')">India</button>  
-                                <button class="tablink" onclick="openTab('tabUSA', this, 'green')">USA</button>
-                                <button class="tablink" onclick="openTab('tabUK', this, '#236bff')">UK</button>
+                                <button class="tablink" onclick="openTab('tabUSA', this, 'green')" >USA</button>
+                                <button class="tablink" onclick="openTab('tabUK', this, '#236bff')" id="defaultOpen">UK</button>
                                 <button class="tablink" onclick="openTab('tabNL', this, '#236bff')">Netherlands</button>  
-                            </div>*@
+                            </div>
                             <div class="col-md-2 d-none d-md-block">
-                                <button class="tablink" onclick="openTab('tab01', this, '#236bff')" id="defaultOpen">Timeline</button>
-                                <button class="tablink" onclick="openTab('tab02', this, '#236bff')">In Progress</button>  
+                                <button class="tablink" onclick="openTab('tabUAE', this, '#236bff')">UAE</button>  
+                                <button class="tablink" onclick="openTab('tabDE', this, 'green')" >Germany</button>
+                                <button class="tablink" onclick="openTab('tabFR', this, '#236bff')">France</button>
+                                <button class="tablink" onclick="openTab('tabSEA', this, '#236bff')">SEA</button>  
                             </div>
                         </div>
                     </div>
@@ -80,7 +79,7 @@
             </div>
 
             @*Tab: Timeline*@
-            @*<div class="section tabcontent-pp" id="tabTL">
+            <div class="section tabcontent-pp" id="tabTL">
                 <div class="container cc-experience">
                     <div class="h4 text-center mb-4 title">Timeline</div>
                     @foreach(var item in Model.TimeLineList.OrderByDescending(x=>x.DateInt))
@@ -110,72 +109,74 @@
                         </div>
                     }
                 </div>
-            </div>*@
+            </div>
 
             @*Tab: Marathon*@
-            @*<div class="section tabcontent-pp" id="tabM">
+            <div class="section tabcontent-pp" id="tabM">
                 @await Html.PartialAsync("_MarathonView", 
                                 Model.MarathonData,
                                 new ViewDataDictionary(ViewData))
-            </div>*@
+            </div>
 
             @*Tab: IND*@
-           @* <div class="section tabcontent-pp" id="tabIN">
+            <div class="section tabcontent-pp" id="tabIN">
                 @await Html.PartialAsync("_ProfilePageSectionView", 
                                 Model.IndiaData,
                                 new ViewDataDictionary(ViewData))
-            </div>*@
+            </div>
 
             @*Tab: USA*@
-           @* <div class="section tabcontent-pp" id="tabUSA">
+            <div class="section tabcontent-pp" id="tabUSA">
                 @await Html.PartialAsync("_ProfilePageSectionView", 
                                 Model.USAData,
                                 new ViewDataDictionary(ViewData))
-            </div>*@
+            </div>
 
             @*Tab: UK*@
-            @*<div class="section tabcontent-pp" id="tabUK">
+            <div class="section tabcontent-pp" id="tabUK">
                 @await Html.PartialAsync("_ProfilePageSectionView", 
                                 Model.UKData,
                                 new ViewDataDictionary(ViewData))
-            </div>*@
+            </div>
 
             @*Tab: Netherlands*@
-            @*<div class="section tabcontent-pp" id="tabNL">
+            <div class="section tabcontent-pp" id="tabNL">
                 @await Html.PartialAsync("_ProfilePageSectionView", 
                                 Model.NLData,
                                 new ViewDataDictionary(ViewData))
-            </div>*@
+            </div>
 
             @*Tab: Germany*@
-            @*<div class="section tabcontent-pp" id="tabDE">
+            <div class="section tabcontent-pp" id="tabDE">
                 @await Html.PartialAsync("_ProfilePageSectionView", 
                                 Model.DEData,
                                 new ViewDataDictionary(ViewData))
-            </div>*@
+            </div>
 
             @*Tab: UAE*@
-           @* <div class="section tabcontent-pp" id="tabUAE">
+            <div class="section tabcontent-pp" id="tabUAE">
                 <div class="container cc-experience">
                     <div class="h4 text-center mb-4 title">UAE</div>
                     
                 </div>
-            </div>*@
-
-            @*Tab: France*@
-            <div class="section tabcontent-pp" id="tab01">
-                <div id="map" style="width:1400px;height:800px;"></div>
             </div>
 
-            <div class="section tabcontent-pp" id="tab02">
+            @*Tab: France*@
+            <div class="section tabcontent-pp" id="tabFR">
                 <div class="container cc-experience">
                     <div class="h4 text-center mb-4 title">France</div>
-
-                    <div id="map" style="height:100%"></div>
+                    
                 </div>
             </div>
 
-@*            <div class="section">
+            @*Tab: SEA*@
+            <div class="section tabcontent-pp" id="tabSEA">
+                @await Html.PartialAsync("_ProfilePageSectionView", 
+                                Model.SEAData,
+                                new ViewDataDictionary(ViewData))
+            </div>
+
+            <div class="section">
                 <div class="container cc-education">
                     <div class="container text-center">
                         <a class="cc-facebook btn btn-link" target="_new" href="https://www.facebook.com/in.singhkuldeep/"><i class="fa fa-facebook fa-2x " aria-hidden="true"></i></a>
@@ -185,10 +186,22 @@
                     </div>
                     <div class="h4 title text-center">Kuldeep Singh</div>
                 </div>
-            </div>*@
+            </div>
         </div>
     </div>
 
+      <div class="row">
+        @*<div class="col-md-3">
+            <div class="sticky-top">
+            <div class="cc-profile-image text-center"><a href="#"><img src="images/kd.jpg" alt="Image" /></a></div>
+       
+            <button class="tablink" onclick="openTab('tab01', this, '#236bff')" id="defaultOpen">Marathon</button>  
+            <button class="tablink" onclick="openTab('tab02', this, 'green')" >Around the world</button>
+            <button class="tablink" onclick="openTab('tab03', this, '#236bff')">Coming Soon ...</button>
+
+            </div>
+        </div>*@
+    </div>
   </body>
 </html>          
 
@@ -216,39 +229,4 @@
         // Add the specific color to the button used to open the tab content
         elmnt.style.backgroundColor = color;
     }
-
-    var locations = [
-        ['Delhi', 28.35, 77.12, ''],
-        ['London', 51.32, 0.5, ''],
-        ['Munich', 48.8, 11.35, ''],
-        ['Singapore', 1.14, 103.55, ''],
-    ];
-
-    function initMap() {
-        var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 3,
-            center: new google.maps.LatLng(28.35, 77.12),
-            mapTypeId: google.maps.MapTypeId.ROADMAP,
-        });
-
-        var infowindow = new google.maps.InfoWindow();
-        var marker, i;
-
-        for (i = 0; i < locations.length; i++) {
-            marker = new google.maps.Marker({
-                position: new google.maps.LatLng(locations[i][1], locations[i][2]),
-                map: map
-            });
-
-            google.maps.event.addListener(marker, 'click', (function (marker, i) {
-                return function () {
-                    var content = locations[i][0] + '<br><img src="' + locations[i][3] + '" style="width:300px;">';
-                    infowindow.setContent(content);
-                    infowindow.open(map, marker);
-                }
-            })(marker, i));
-        }
-    }
-    //google.maps.event.addDomListener(window, 'load', initialize);
 </script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMLNjSznN9kkTZeBAK1fbxkFmPBC8yHGc&callback=initMap&libraries=&v=weekly" async ></script>

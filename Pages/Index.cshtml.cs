@@ -72,7 +72,7 @@ namespace ResumeWebsite.Pages
                 {
                     CredlyBadges.Add(new BadgesfromCredly
                     {
-                        Title = item01.InnerText.Trim(),
+                        Title = item01.InnerText.Trim().Replace("Instructor Recognition -", "Learn On Demand -"),
                         SubTitle = item02.InnerText.Trim(),
                         BadgeURL = string.Format("{1}/images/Badges/{0}.png{2}", item01.InnerText.Trim().Replace(" ", "").Replace(":", ""), BlobURL, SASToken),
                         BadgeURLFallBack = item03.Attributes["src"].Value,

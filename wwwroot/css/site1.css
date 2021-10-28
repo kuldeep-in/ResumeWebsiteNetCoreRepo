@@ -135,6 +135,12 @@ li {
     list-style-type: none;
 }
 
+.experiencelist {
+    list-style-type: disclosure-closed;
+    line-height: 1.5em;
+    margin-bottom: 6px;
+}
+
 .section-title {
     margin-bottom: 20px;
     margin-top:35px;

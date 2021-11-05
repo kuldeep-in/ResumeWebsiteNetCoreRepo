@@ -66,16 +66,17 @@ namespace ResumeWebsite.Pages
             {
                 var item01 = item.Descendants().Where(n => n.HasClass("cr-standard-grid-item-content__title")).FirstOrDefault();
                 var item02 = item.Descendants().Where(n => n.HasClass("cr-standard-grid-item-content__subtitle")).FirstOrDefault();
-                var item03 = item.Descendants("img").FirstOrDefault();
+                var item03 = item.Descendants().Where(n => n.HasClass("cr-standard-grid-item-content__image")).FirstOrDefault();
                 var item04 = item.Descendants("a").FirstOrDefault();
-                if (!item01.InnerText.Contains("(Legacy)"))
+                if (!item01.InnerText.Contains("(Legacy)") && !item01.InnerText.Contains("Announcement"))
                 {
                     CredlyBadges.Add(new BadgesfromCredly
                     {
-                        Title = item01.InnerText.Trim().Replace("Instructor Recognition -", "Learn On Demand -"),
+                        Title = item01.InnerText.Trim().Replace("Instructor Recognition -", "Skillable -"),
                         SubTitle = item02.InnerText.Trim(),
-                        BadgeURL = string.Format("{1}/images/Badges/{0}.png{2}", item01.InnerText.Trim().Replace(" ", "").Replace(":", ""), BlobURL, SASToken),
-                        BadgeURLFallBack = item03.Attributes["src"].Value,
+                        //BadgeURL = string.Format("{1}/images/Badges/{0}.png{2}", item01.InnerText.Trim().Replace(" ", "").Replace(":", ""), BlobURL, SASToken),
+                        BadgeURL = item03.Attributes["src"].Value.Replace("size/110x110/", ""),
+                        BadgeURLFallBack = item03.Attributes["src"].Value.Replace("size/110x110/", ""),
                         CertificateURL = string.Format("https://www.credly.com/{0}", item04.Attributes["href"].Value)
                     });
                 }

@@ -15,10 +15,14 @@
     <PackageReference Include="Azure.Storage.Blobs" Version="12.9.1" />
     <PackageReference Include="HtmlAgilityPack" Version="1.11.33" />
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.14.0" />
-    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" ExcludeAssets="All"/>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" ExcludeAssets="All" />
     <!--<None Update="resume\KuldeepSingh_Resume.pdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>-->
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="images\Badges\_archive\" />
   </ItemGroup>
 
 </Project>

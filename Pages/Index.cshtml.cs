@@ -35,7 +35,7 @@ namespace ResumeWebsite.Pages
                 Encoding = System.Text.Encoding.UTF8
             };
 
-            string url = string.Format("https://www.credly.com/users/singhkuldeep/badges");
+            string url = string.Format("https://www.credly.com/users/kuldeepsingh/badges");
 
             string result = webClient.DownloadString(url);
 

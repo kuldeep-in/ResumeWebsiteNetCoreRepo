@@ -14,7 +14,7 @@ namespace ResumeWebsite.Pages
     {
         public IConfiguration Configuration { get; }
         private readonly ILogger<IndexModel> _logger;
-        public IList<string> Badges { get; set; }
+        //public IList<string> Badges { get; set; }
         public IList<BadgesfromCredly> CredlyBadges { get; set; }
         public IList<string> Technologies { get; set; }
         public IList<string> Certificates { get; set; }
@@ -47,9 +47,9 @@ namespace ResumeWebsite.Pages
             {
                 new BadgesfromCredly
                 {
-                    Title = "Accredited: Azure Cosmos DB",
+                    Title = "Mentor: Azure Cosmos DB",
                     SubTitle = "Microsoft Learn",
-                    BadgeURL = string.Format("{0}/images/Badges/cosmosL200.jpg{1}", BlobURL, SASToken),
+                    BadgeURL = string.Format("{0}/images/Badges/CosmosDB_Mentor.jpg{1}", BlobURL, SASToken),
                     BadgeURLFallBack = "",
                     CertificateURL = ""
                 },
@@ -82,25 +82,25 @@ namespace ResumeWebsite.Pages
                 }
             }
 
-            Badges = new List<string>
-            {
-                string.Format("{0}/images/Badges/01-AzSolutionArchitect-badge.png{1}", BlobURL, SASToken),
-                string.Format("{0}/images/Badges/02-DevOpsExpert-badge.png{1}", BlobURL, SASToken),
-                string.Format("{0}/images/Badges/03-AzDataEngineer-badge.png{1}", BlobURL, SASToken),
-                string.Format("{0}/images/Badges/04-DataAnalystAssociate-badge.png{1}", BlobURL, SASToken),
-                string.Format("{0}/images/Badges/04-DatabaseAdministrator-badge.png{1}", BlobURL, SASToken),
-                string.Format("{0}/images/Badges/azureAdministrator600.png{1}", BlobURL, SASToken),
-                string.Format("{0}/images/Badges/azuredeveloperassociate600.png{1}", BlobURL, SASToken),
-                string.Format("{0}/images/Badges/adf.png{1}", BlobURL, SASToken),
-                string.Format("{0}/images/Badges/cosmosL200.jpg{1}", BlobURL, SASToken),
-                string.Format("{0}/images/Badges/accessibility.png{1}", BlobURL, SASToken),
-                //"images/Badges/xamarin.png",
-                string.Format("{0}/images/Badges/01-exam-az300.png{1}", BlobURL, SASToken),
-                string.Format("{0}/images/Badges/01-exam-az301.png{1}", BlobURL, SASToken),
-                string.Format("{0}/images/Badges/02-exam-az400.png{1}", BlobURL, SASToken),
-                string.Format("{0}/images/Badges/03-exam-dp200.png{1}", BlobURL, SASToken),
-                string.Format("{0}/images/Badges/03-exam-dp201.png{1}", BlobURL, SASToken)
-            };
+            //Badges = new List<string>
+            //{
+            //    string.Format("{0}/images/Badges/01-AzSolutionArchitect-badge.png{1}", BlobURL, SASToken),
+            //    string.Format("{0}/images/Badges/02-DevOpsExpert-badge.png{1}", BlobURL, SASToken),
+            //    string.Format("{0}/images/Badges/03-AzDataEngineer-badge.png{1}", BlobURL, SASToken),
+            //    string.Format("{0}/images/Badges/04-DataAnalystAssociate-badge.png{1}", BlobURL, SASToken),
+            //    string.Format("{0}/images/Badges/04-DatabaseAdministrator-badge.png{1}", BlobURL, SASToken),
+            //    string.Format("{0}/images/Badges/azureAdministrator600.png{1}", BlobURL, SASToken),
+            //    string.Format("{0}/images/Badges/azuredeveloperassociate600.png{1}", BlobURL, SASToken),
+            //    string.Format("{0}/images/Badges/adf.png{1}", BlobURL, SASToken),
+            //    string.Format("{0}/images/Badges/CosmosDB_Mentor.jpg{1}", BlobURL, SASToken),
+            //    string.Format("{0}/images/Badges/accessibility.png{1}", BlobURL, SASToken),
+            //    //"images/Badges/xamarin.png",
+            //    string.Format("{0}/images/Badges/01-exam-az300.png{1}", BlobURL, SASToken),
+            //    string.Format("{0}/images/Badges/01-exam-az301.png{1}", BlobURL, SASToken),
+            //    string.Format("{0}/images/Badges/02-exam-az400.png{1}", BlobURL, SASToken),
+            //    string.Format("{0}/images/Badges/03-exam-dp200.png{1}", BlobURL, SASToken),
+            //    string.Format("{0}/images/Badges/03-exam-dp201.png{1}", BlobURL, SASToken)
+            //};
 
             Certificates = new List<string>
             {

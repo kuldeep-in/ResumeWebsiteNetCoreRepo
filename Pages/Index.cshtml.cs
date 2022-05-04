@@ -116,9 +116,13 @@ namespace ResumeWebsite.Pages
 
             Technologies = new List<string>
             {
-                ".net(C#)",
-                ".net CORE",
-                "PowerShell",
+                "Architect",
+                "Project Management",
+                "Data Engineering",
+                "Data Analytics",
+                "Solution Design",
+                "Agile / Scrum",
+                "Performance Optimization",
                 "Azure Web/ Compute",
                 "Azure SQL",
                 "Cosmos DB",
@@ -131,10 +135,7 @@ namespace ResumeWebsite.Pages
                 "Application Monitoring",
                 "Azure Automation",
                 "Azure DevOps",
-                "Power BI",
-                "Agile / Scrum",
-                "Performance Optimization",
-                "Solution Design"
+                "Power BI"
             };
         }
     }

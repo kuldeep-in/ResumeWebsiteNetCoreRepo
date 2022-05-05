@@ -7,7 +7,8 @@ Extra extra large xxl ?1400px*/
 
 @media only screen and (min-width: 768px) {
     .sidebarWrapper {
-        position: fixed;
+        position:fixed;
+        /*height: 100vh;*/
     }
 
     .toggle-btn {
@@ -114,9 +115,9 @@ Extra extra large xxl ?1400px*/
         /*background-color: #fff;*/
     }
 
-    /*.container {
-        width:970px;
-    }*/
+    .about-background, .mainContentBackground {
+        padding-right: 40px;
+    }
 
     .mainContentWrapper {
         padding: 0;
@@ -179,9 +180,13 @@ Extra extra large xxl ?1400px*/
         width: 85%;
     }
 
-    .fixed-left-contact, .fixed-right-socials, .right-br, .left-br {
+    .fixed-left-contact, .right-br, .left-br {
         display: none;
     }
+
+    /*.fixed-right-socials {
+        display: none;
+    }*/
 
     .container {
         padding: 0 30px;

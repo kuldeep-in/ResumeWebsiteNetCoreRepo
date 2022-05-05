@@ -58,12 +58,6 @@ a {
     line-height: 28px
 }
 
-.sidebarWrapper {
-    background: var(--bgColor1);
-    text-align: center;
-    height: 100vh;
-}
-
 .toggle-btn {
     background: #141414 none repeat scroll 0 0;
     text-align: center;
@@ -177,6 +171,8 @@ li {
     color: #fff;
     background: var(--bgColor2);
     padding: 27px 0 0;
+    text-align: center;
+    /*height: 100vh;*/
 }
 
 .badge-img {

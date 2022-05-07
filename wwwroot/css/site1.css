@@ -962,7 +962,15 @@ textarea {
     background: var(--bgColor3) none repeat scroll 0 0;
 }
 
+.left-social .fa-github {
+    background: var(--bgColor3) none repeat scroll 0 0;
+}
+
 .list-unstiled .fa-twitter {
+    background: #3698A2 none repeat scroll 0 0;
+}
+
+.left-social .fa-twitter {
     background: #3698A2 none repeat scroll 0 0;
 }
 
@@ -970,7 +978,15 @@ textarea {
     background: #097fc3 none repeat scroll 0 0;
 }
 
+.left-social .fa-linkedin {
+    background: #097fc3 none repeat scroll 0 0;
+}
+
 .list-unstiled .fa-instagram {
+    background: #d234b0 none repeat scroll 0 0;
+}
+
+.left-social .fa-instagram {
     background: #d234b0 none repeat scroll 0 0;
 }
 
@@ -978,11 +994,23 @@ textarea {
     background: #00aff0 none repeat scroll 0 0;
 }
 
+.left-social .fa-skype {
+    background: #00aff0 none repeat scroll 0 0;
+}
+
 .list-unstiled .fa-envelope-o {
     background: var(--pColor1) none repeat scroll 0 0;
 }
 
+.left-social .fa-envelope-o {
+    background: var(--pColor1) none repeat scroll 0 0;
+}
+
 .list-unstiled .fa-user-circle-o {
+    background: var(--bgColor3) none repeat scroll 0 0;
+}
+
+.left-social .fa-user-circle-o {
     background: var(--bgColor3) none repeat scroll 0 0;
 }
 
@@ -1094,3 +1122,17 @@ textarea:focus, textarea.form-control:focus, input.form-control:focus, input[typ
     .badgeCard[data-background-color="green"] {
         background-color: #18ce0f;
     }
+
+.left-social {
+    display:none;
+    padding:10px;
+}
+
+    .left-social a {
+        margin:8px;
+    }
+
+        .left-social a i {
+            border-radius:20px;
+            padding : 5px;
+        }

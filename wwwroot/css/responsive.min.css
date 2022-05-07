@@ -115,9 +115,9 @@ Extra extra large xxl ?1400px*/
         /*background-color: #fff;*/
     }
 
-    .about-background, .mainContentBackground {
+    /*.about-background, .mainContentBackground {
         padding-right: 40px;
-    }
+    }*/
 
     .mainContentWrapper {
         padding: 0;
@@ -128,6 +128,10 @@ Extra extra large xxl ?1400px*/
 @media screen and (max-width: 991px) {
     body {
         /*background-color: #fff;*/
+    }
+
+    .container {
+        padding: 0 20px;
     }
 
     .downloadResume {
@@ -147,6 +151,11 @@ Extra extra large xxl ?1400px*/
 @media screen and (max-width: 767px) {
     body {
         /*background-color: #fff;*/
+    }
+
+    .content-box {
+        padding: 10px 5px;
+        border-radius: 6px;
     }
 
     .downloadResume {
@@ -184,12 +193,12 @@ Extra extra large xxl ?1400px*/
         display: none;
     }
 
-    /*.fixed-right-socials {
+    .fixed-right-socials {
         display: none;
-    }*/
+    }
 
-    .container {
-        padding: 0 30px;
+    .left-social {
+        display: block;
     }
 
     .menu {
@@ -275,20 +284,10 @@ Extra extra large xxl ?1400px*/
         display: none;
     }
 
-    .container {
-        padding: 0 20px;
-    }
-
     .resume-box {
         margin-bottom: 30px;
         border-radius: 6px;
         background-color: var(--bgColor3);
-    }
-
-    .content-box {
-        background: var(--bgColor2);
-        padding: 10px;
-        border-radius: 6px;
     }
 
     .badgeCard {
